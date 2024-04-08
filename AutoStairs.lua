@@ -80,3 +80,5 @@ onKeyPress(function(keys)
         ClosestStair.walkTime = (now + 225);
     end
 end)
+
+UI.Separator()

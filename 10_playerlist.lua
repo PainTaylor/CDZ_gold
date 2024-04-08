@@ -349,3 +349,5 @@ onPlayerPositionChange(function(x,y)
     end)
   end
 end)
+
+UI.Separator()

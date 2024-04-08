@@ -223,3 +223,5 @@ macro(100, function()
     end
   end
 end)
+
+UI.Separator()

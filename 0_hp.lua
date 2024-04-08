@@ -32,3 +32,5 @@ itemhealmacro = macro(200, 'Item heal', function()
     use(tonumber(storage.hpitem))
   end
 end)
+
+UI.Separator()

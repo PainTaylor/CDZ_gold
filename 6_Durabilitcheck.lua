@@ -29,3 +29,5 @@ storage.mindurability = newText
 end)
 
 Backincave = macro(200, '100%',function()end)
+
+UI.Separator()

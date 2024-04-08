@@ -71,3 +71,5 @@ onTextMessage(function(mode, text)
     local tab = console.getTab(tabName) or console.addTab(tabName, true)
     console.addText(text, console.SpeakTypesSettings, tabName, "")
  end)
+
+UI.Separator()

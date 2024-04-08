@@ -62,3 +62,4 @@ local efiendIndex, _ = text:find('It');
   end
 end)
 
+UI.Separator()

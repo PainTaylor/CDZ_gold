@@ -25,3 +25,5 @@ for _, scripts in ipairs({storage.ingame_macros, storage.ingame_hotkeys}) do
     end
   end
 end
+
+UI.Separator()

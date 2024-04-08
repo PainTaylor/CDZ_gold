@@ -232,3 +232,5 @@ if g_game.isAttacking() then return end
     end
   end
 end)
+
+UI.Separator()

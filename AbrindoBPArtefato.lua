@@ -16,3 +16,5 @@ if  ArtefactBpOpen == 'false' or ArtefactBpOpen == nil then
 g_game.open(findItem(654))
 end
 end)
+
+UI.Separator()

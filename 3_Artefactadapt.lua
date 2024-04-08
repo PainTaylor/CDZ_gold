@@ -35,3 +35,4 @@ macro(200, 'ArtefactAdapt', function()
   end
 end)
 
+UI.Separator()

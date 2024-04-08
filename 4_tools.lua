@@ -142,3 +142,5 @@ UI.DualScrollPanel(storage.manaTrain, function(widget, newParams)
   storage.manaTrain = newParams
   manatrainmacro.setOn(storage.manaTrain.on)
 end)
+
+UI.Separator()
