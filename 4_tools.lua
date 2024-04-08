@@ -147,7 +147,7 @@ UI.Separator()
 
 local idz = {13328, 13329, 13330, 13331, 13332, 13333, 13334, 13335, 13336, 13337, 13338, 13339, 13340, 13341, 13342, 13428, 14256, 13429, 13427, 13422, 13430, 13424, 13426, 14255, 13431, 13423, 13421, 13425, 14261, 14263}
 
-macro(300, "Coletar itens do chão", function()
+macro(300, "Ground Collect", function()
     local playerPos = g_game.getLocalPlayer():getPosition()
     local z = playerPos.z 
     local tiles = g_map.getTiles(posz()) 
