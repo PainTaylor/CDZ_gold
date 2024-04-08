@@ -1,3 +1,13 @@
+closeLoginAdvice = function()
+    for _, widget in pairs(g_ui.getRootWidget():getChildren()) do
+        if (tr("For Your Information") == widget:getText()) then
+            widget:destroy();
+            break
+        end
+    end
+end
+
+
 -- Author: Vithrax
 -- contains mostly basic function shortcuts and code shorteners
 
