@@ -461,7 +461,14 @@ onLoginAdvice(function(mensage)
 --info('LimiteS: ' .. FragSlimit)
 --info('LimiteM: ' .. FragMlimit)
   end
+    for _, widget in pairs(g_ui.getRootWidget():getChildren()) do
+        if (widget:getText():find("For Your Information")) then
+            widget:destroy();
+            break
+        end
+    end
 end)
+
 onTextMessage(function(mode, text)
   if text:find('The murder of') then
     Fragdiario = Fragdiario + 1
