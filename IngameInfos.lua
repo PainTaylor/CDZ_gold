@@ -431,6 +431,15 @@ Fragdiario = 0
 FragSemanal = 0
 FragMensal = 0
 
+closeLoginAdvice = function()
+    for _, widget in pairs(g_ui.getRootWidget():getChildren()) do
+        if (widget:getText():find("For Your Information")) then
+            widget:destroy();
+            break
+        end
+    end
+end
+
 onLoginAdvice(function(mensage)
   if mensage:find('Seus frags') then
     --info('true1')
@@ -457,16 +466,11 @@ onLoginAdvice(function(mensage)
     Fragdlimit = FragDiarioServer -1
     FragSlimit = FragSemanalServer - 1
     FragMlimit = FragMensalServer - 1
+      closeLoginAdvice()
 --info('LimiteD: ' .. Fragdlimit)
 --info('LimiteS: ' .. FragSlimit)
 --info('LimiteM: ' .. FragMlimit)
   end
-    for _, widget in pairs(g_ui.getRootWidget():getChildren()) do
-        if (widget:getText():find("For Your Information")) then
-            widget:destroy();
-            break
-        end
-    end
 end)
 
 onTextMessage(function(mode, text)
