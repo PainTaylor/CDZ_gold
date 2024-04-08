@@ -1,3 +1,4 @@
+setDefaultTab("Main")
 -- allows to test/edit bot lua scripts ingame, you can have multiple scripts like this, just change storage.ingame_lua
 UI.Button("Ingame macro editor", function(newText)
   UI.MultilineEditorWindow(storage.ingame_macros or "", {title="Macro editor", description="You can add your custom macros (or any other lua code) here"}, function(text)
