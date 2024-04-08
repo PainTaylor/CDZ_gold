@@ -28,4 +28,11 @@ IsInGreeceTemple = function()
 end
 
 
+isinaiolosstart = function()
+    if (posx() >= 883 and posx() <= 902) and (posy() >= 1676 and posy() <= 1683) then
+        return true
+    end
+end
+
+
 
