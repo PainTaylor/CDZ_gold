@@ -101,7 +101,7 @@ UI.TextEdit(storage.ntarget2 or "Nejia", function(widget, newText)
 storage.ntarget2 = newText
 end)
 
-macro(100, 'AttackName', function() 
+atkname = macro(100, 'AttackName', function() 
 if g_game.isAttacking() or g_game.isFollowing() then return end
   for _, spec in ipairs(getSpectators()) do
     local specifytarget = spec:getName()
