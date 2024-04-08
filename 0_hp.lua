@@ -18,7 +18,7 @@ healmacro = macro(200, 'heal', function()
   end
  end)
 
-UI.Label('ID')
+UI.Label('Item ID')
 UI.TextEdit(storage.hpitem or "3077", function(widget, newText)
 storage.hpitem = newText
 end)
