@@ -412,7 +412,7 @@ onTextMessage(function(mode, text)
 
 UI.Separator()
 
-setDefaultTab("Out")
+setDefaultTab("Tools")
 
 say('!frags')
 TFragdiario = 0
