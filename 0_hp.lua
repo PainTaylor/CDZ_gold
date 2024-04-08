@@ -18,11 +18,11 @@ healmacro = macro(200, 'heal', function()
   end
  end)
 
-
+UI.Label('ID')
 UI.TextEdit(storage.hpitem or "3077", function(widget, newText)
 storage.hpitem = newText
 end)
-
+UI.Label('HP')
 UI.TextEdit(storage.hppot or "60", function(widget, newText)
 storage.hppot = newText
 end)
