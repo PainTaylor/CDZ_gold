@@ -48,7 +48,7 @@ end
          if nome and nivel then
              nivel = tonumber(nivel)
              if nivelAnterior[nome] then
-                 if nivelAnterior[nome] ~= nivel then
+                 if nivelAnterior[nome] ~= nivel and nivel > 300 then
                      local data = {
                      title = 'Mudou de Nivel',
                      name = nome,
