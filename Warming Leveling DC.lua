@@ -62,10 +62,9 @@ end
              nivelAnterior[nome] = nivel
          end
      end
- end
+ end)
 
-
- macro(200, 'auto !online', function()
+ macro(200, 'auto !online',function()
 say('!online')
 delay(5000)
 end)
