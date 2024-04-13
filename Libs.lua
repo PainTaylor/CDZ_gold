@@ -783,7 +783,7 @@ if player:getTitle() == ('Krishna [Chrysaor]') then
 end
 
 if player:getTitle() == ('Bian [Cavalo Marinho]') then
- storage.combo1 = 'assopro divinoe'
+ storage.combo1 = 'assopro divino'
  storage.combo2 = 'goddo buresu'
  storage.combo3 = 'raijingu birouzu'
  storage.combo4 = 'ultimate cavalo marinho'
