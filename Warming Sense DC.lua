@@ -1,8 +1,8 @@
-local discordTimes = {}
+ local discordTimes = {}
  -- insert your webhook link below
-local webhook = "https://discord.com/api/webhooks/1227451625983971428/4447nDBRonca6MP9Ukcs6klRiOpYW34kb0JTiwoU4CR6ZQ9IYuEkL29z9jqRGDLUKFRg"
+local webhook1 = "https://discord.com/api/webhooks/1227451625983971428/4447nDBRonca6MP9Ukcs6klRiOpYW34kb0JTiwoU4CR6ZQ9IYuEkL29z9jqRGDLUKFRg"
 
-local default_data = {
+local default_data1 = {
   username = "Fogueteiro", -- name discord displays the message from
 }
 
@@ -18,7 +18,7 @@ end
 
  -- This allows you to send messages to discord using a webhook.
  -- The "id" is to save the time it was last used and the "delayed" is the next time it can send (Player alert beeps every 1500ms, you can make it so it only sends the alert once every 10 seconds etc.)
-function sendDiscordWebhook(data)
+function sendDiscordWh(data)
 local id = data.id
   if id then
     local dTime = discordTimes[id]
@@ -40,9 +40,9 @@ local id = data.id
     }
   }
 
-  local dataSend = default_data
+  local dataSend = default_data1
   dataSend.embeds = { dEmbed }
-  HTTP.postJSON(webhook, dataSend, onHTTPResult)
+  HTTP.postJSON(webhook1, dataSend, onHTTPResult)
 end
 
  --------------
@@ -65,7 +65,7 @@ storage.alvo = {}
      id = "pd",
    }
       info('true')
-      sendDiscordWebhook(data)
+      sendDiscordWh(data)
     end
     storage.alvo[procurado] = new_value;
   end
