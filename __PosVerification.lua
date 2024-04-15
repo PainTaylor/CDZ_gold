@@ -34,5 +34,9 @@ isinaiolosstart = function()
     end
 end
 
-
+isinGreciaCity = function()
+    if (posx() >= 983 and posx() <= 1082) and (posy() >= 982 and posy() <= 1060) and (posz() >= 6 and posz() <= 7) then
+    return true
+    end
+end
 
