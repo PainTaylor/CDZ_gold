@@ -1,9 +1,4 @@
-setDefaultTab("Main")
---onKeyDown(function(keys)
---if keys == '0' then
- -- say(player:getTitle())
---end
---end)
+
 
 --------------------------------------------------------------------------------------
 
