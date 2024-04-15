@@ -813,3 +813,10 @@ if player:getTitle() == ('Shun [Andromeda Divino]') then
 end
 
 end)
+
+setDefaultTab("Main")
+--onKeyDown(function(keys)
+--if keys == '0' then
+ -- say(player:getTitle())
+--end
+--end)
