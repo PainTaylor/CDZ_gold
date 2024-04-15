@@ -812,6 +812,16 @@ if player:getTitle() == ('Shun [Andromeda Divino]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('Seiya [Pegasus Celeste]') then
+  storage.combo1 = 'meteoro de pegasus astral'
+  storage.combo2 = 'cometa de pegasus astral'
+  storage.combo3 = 'turbilhao de pegasus astral'
+  storage.combo4 = 'ultimate pegasus celeste'
+  storage.sspell = nil
+  storage.ultimate = nil
+  info('Load: ' .. player:getTitle())
+end
+
 end)
 
 setDefaultTab("Main")
