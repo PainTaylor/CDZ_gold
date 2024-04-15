@@ -405,7 +405,7 @@ aviso = macro(100, 'aviso guild', function()
                 local data = {
                 title = 'Player in Cave',
                 name = specName,
-                message = 'Loc: X: '.. posx() .. 'Y: ' .. posy() .. 'Z: ' .. posz() .. 'Avistado por: ' .. player:getName(),
+                message = 'Loc: X: '.. posx() .. 'Y: ' .. posy() .. 'Z: ' .. posz() .. '. Avistado por: ' .. player:getName(),
                 id = "pd",
                 }
                 SDW3(data)
