@@ -55,7 +55,7 @@ end
   if not text:find('Loot of') then return end
    if text:find('Lendario') then
      raridade = 'Lendario'
-   elseif text:find('Épico') then
+   elseif text:find('pico') then
      raridade = 'Epico'
    end
    

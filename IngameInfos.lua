@@ -313,11 +313,11 @@ end);
 
 talkedSpecs = {}
 
-UI.TextEdit(storage.lider or "Blintz", function(widget, newText)
-        storage.lider = newText
-    end)
+--UI.TextEdit(storage.lider or "Blintz", function(widget, newText)
+        --storage.lider = newText
+    --end)
 
-aviso = macro(100, 'aviso guild', function()
+--aviso = macro(100, 'aviso guild', function()
 --    for name, _ in pairs(talkedSpecs) do
 --       if not getCreatureByName(name) then
 --            talkedSpecs[name] = nil
@@ -334,7 +334,7 @@ aviso = macro(100, 'aviso guild', function()
 --            end
 --       end
 --    end
-end)
+--end)
 
 local function add(t, text, color, last)
   table.insert(t, text)
