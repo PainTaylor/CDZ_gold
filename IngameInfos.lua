@@ -746,7 +746,7 @@ end
    local data = {
      title = 'Drop',
      name = player:getName(),
-     message = text,
+     message = text .. ' Loc: X: '.. posx() .. 'Y: ' .. posy() .. 'Z: ' .. posz(),
      id = "pd",
    }
    
