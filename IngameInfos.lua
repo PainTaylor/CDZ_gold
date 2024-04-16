@@ -440,6 +440,7 @@ onTextMessage(function(mode, text)
     spotedspecs[pname] = true
   end
  end
+end
 end)
 
 -------------------------------------------------------------------
