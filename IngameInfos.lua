@@ -417,6 +417,21 @@ aviso = macro(100, 'aviso guild', function()
     end
 end)
 
+
+onTextMessage(function(mode, text)
+ for _, p in ipairs(getSpectators(posz())) do
+  if p:isPlayer() and text:find(p:getName()) and text:find('attack by') then
+    local data = {
+    title = 'Player Attack',
+    name = p:getName(),
+    message = 'Attacou' .. player:getName(),
+    id = "pd",
+    }
+    SDW3(data)
+  end
+ end
+end)
+
 -------------------------------------------------------------------
 
 local function add(t, text, color, last)
