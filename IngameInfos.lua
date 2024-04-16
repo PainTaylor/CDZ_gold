@@ -418,16 +418,26 @@ aviso = macro(100, 'aviso guild', function()
 end)
 
 
+spotedspecs = {}
+
 onTextMessage(function(mode, text)
+      for pname, _ in pairs(spotedspecs) do
+        if not getCreatureByName(pname) then
+            spotedspecs[pname] = nil
+        end
+    end
  for _, p in ipairs(getSpectators(posz())) do
   if p:isPlayer() and text:find(p:getName()) and text:find('attack by') then
+    if not spotedspecs[pname] then
+    pname = p:getName()
     local data = {
     title = 'Player Attack',
-    name = p:getName(),
+    name = pname,
     message = 'Attacou' .. player:getName(),
     id = "pd",
     }
     SDW3(data)
+    spotedspecs[pname] = true
   end
  end
 end)
