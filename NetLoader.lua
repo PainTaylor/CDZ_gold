@@ -2,15 +2,19 @@ modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/
     assert(loadstring(script))()
   end);
 
+modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Cavebot.lua', function(script)
+    assert(loadstring(script))()
+  end);
+
 modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Libs.lua', function(script)
     assert(loadstring(script))()
   end);
 
-modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/__PosVerification.lua', function(script)
+modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/TargetBot.lua', function(script)
     assert(loadstring(script))()
   end);
 
-modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Cavebot.lua', function(script)
+modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/__PosVerification.lua', function(script)
     assert(loadstring(script))()
   end);
 
@@ -23,10 +27,6 @@ modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/
   end);
 
 modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/CustomFull.lua', function(script)
-    assert(loadstring(script))()
-  end);
-
-modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/TargetBot.lua', function(script)
     assert(loadstring(script))()
   end);
 
