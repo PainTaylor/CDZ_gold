@@ -553,7 +553,7 @@ onLoginAdvice(function(mensage)
   if mensage:find('Seus frags') then
     --info('true1')
     TFragdiario = mensage:sub(24, 27)
-        --say(TFragdiario)
+        info(TFragdiario)
     TFragsemanal = mensage:sub(43, 45)
             --say(TFragsemanal)
     TFragMensal = mensage:sub(59, 64)
@@ -567,7 +567,7 @@ onLoginAdvice(function(mensage)
   end
   if mensage:find('Frags para Red Skull') then
     FragDiarioServer = tonumber(mensage:sub(92, 97):match('%d+'))
-    --info('LFragDiario: ' .. FragDiarioServer)
+    info('LFragDiario: ' .. FragDiarioServer)
     FragSemanalServer = tonumber(mensage:sub(103, 108):match('%d+'))
     --info('LFragSemanal: ' .. FragSemanalServer)
     FragMensalServer = tonumber(mensage:sub(114, 120):match('%d+'))
@@ -576,7 +576,7 @@ onLoginAdvice(function(mensage)
     FragSlimit = FragSemanalServer - 1
     FragMlimit = FragMensalServer - 1
       closeLoginAdvice()
---info('LimiteD: ' .. Fragdlimit)
+info('LimiteD: ' .. Fragdlimit)
 --info('LimiteS: ' .. FragSlimit)
 --info('LimiteM: ' .. FragMlimit)
   end
