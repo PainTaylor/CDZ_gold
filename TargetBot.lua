@@ -1,4 +1,5 @@
-setDefaultTab(targetingTab)
+
+setDefaultTab("Target")
 TargetBot = {} -- global namespace
 importStyle("/targetbot/looting.otui")
 importStyle("/targetbot/target.otui")
