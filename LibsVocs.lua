@@ -822,13 +822,13 @@ if player:getTitle() == ('Seiya [Pegasus Celeste]') then
   info('Load: ' .. player:getTitle())
 end
 
-if player:getTitle() == ('Seiya [Pegasus Celeste]') then
+if player:getTitle() == ('Zelos [Sapo]') then
   storage.combo1 = 'salto esmagador'
-  storage.combo2 = 'cometa de pegasus astral'
-  storage.combo3 = 'turbilhao de pegasus astral'
-  storage.combo4 = 'ultimate pegasus celeste'
+  storage.combo2 = 'pulverizador de veneno'
+  storage.combo3 = 'muco assombroso'
+  storage.combo4 = 'ultimate sapo'
   storage.sspell = nil
-  storage.ultimate = nil
+  storage.ultimate = 'jumping smash'
   info('Load: ' .. player:getTitle())
 end
 
