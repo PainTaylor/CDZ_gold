@@ -10,7 +10,7 @@ modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/
     assert(loadstring(script))()
   end);
 
-modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/playerlist.lua', function(script)
+modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Cavebot.lua', function(script)
     assert(loadstring(script))()
   end);
 
@@ -26,7 +26,7 @@ modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/
     assert(loadstring(script))()
   end);
 
-modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/playerlist.otui', function(script)
+modules.corelib.HTTP.get('', function(script)
     assert(loadstring(script))()
   end);
 
