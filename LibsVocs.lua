@@ -822,11 +822,20 @@ if player:getTitle() == ('Seiya [Pegasus Celeste]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('Seiya [Pegasus Celeste]') then
+  storage.combo1 = 'salto esmagador'
+  storage.combo2 = 'cometa de pegasus astral'
+  storage.combo3 = 'turbilhao de pegasus astral'
+  storage.combo4 = 'ultimate pegasus celeste'
+  storage.sspell = nil
+  storage.ultimate = nil
+  info('Load: ' .. player:getTitle())
+end
+
 end)
 
-setDefaultTab("Main")
---onKeyDown(function(keys)
---if keys == '0' then
- -- say(player:getTitle())
---end
---end)
+onKeyDown(function(keys)
+if keys == 'Ctrl+0' then
+ say(player:getTitle())
+end
+end)
