@@ -1,4 +1,17 @@
 setDefaultTab("Cave")
+storage.durability = nil
+
+onTextMessage(function(mode, text)
+local _, startIndex = text:find('Durability: ');
+local endIndex, _ = text:find('It');
+if text:find('Durability') and endIndex then
+  durabilityPercentage = text:sub(startIndex, endIndex-4);
+  storage.durability = tonumber(durabilityPercentage)
+end
+if text:find('Durability') and text:find('Broken') then
+storage.durability = 0
+end
+end)
 
 storage.timecheck = now
 
