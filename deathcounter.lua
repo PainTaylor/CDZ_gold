@@ -1,7 +1,4 @@
-local cavebotTab = "Cave"
-local targetingTab = "Target"
-
-setDefaultTab(cavebotTab)
+setDefaultTab('Cave')
 local logoutDeaths = 5  -- numero de mortes
 if type(storage["death"]) ~= "table" then storage["death"] = { count = 0 } end
 local deathCount = storage["death"].count
