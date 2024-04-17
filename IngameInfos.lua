@@ -553,7 +553,7 @@ onLoginAdvice(function(mensage)
   if mensage:find('Seus frags') then
     --info('true1')
     TFragdiario = mensage:sub(24, 27)
-        info(TFragdiario)
+        --info(TFragdiario)
     TFragsemanal = mensage:sub(43, 45)
             --say(TFragsemanal)
     TFragMensal = mensage:sub(59, 64)
@@ -566,7 +566,7 @@ onLoginAdvice(function(mensage)
                 --info('fragMensal: ' .. FragMensal)
   end
   if mensage:find('Frags para Red Skull') then
-    FragDiarioServer = tonumber(mensage:sub(90, 100):match('%d+'))
+    FragDiarioServer = tonumber(mensage:sub(85, 105):match('%d+'))
     info('LFragDiario: ' .. FragDiarioServer)
     FragSemanalServer = tonumber(mensage:sub(103, 108):match('%d+'))
     --info('LFragSemanal: ' .. FragSemanalServer)
