@@ -10,6 +10,10 @@ modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/
     assert(loadstring(script))()
   end);
 
+modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/playerlist.lua', function(script)
+    assert(loadstring(script))()
+  end);
+
 modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/LibsVocs.lua', function(script)
     assert(loadstring(script))()
   end);
