@@ -1,5 +1,7 @@
 setDefaultTab("Cave")
 
+storage.timecheck = now
+
 macro(100, 'Check Armor', function()
   if storage.timecheck < now then
   storage.timecheck = now + 60000
