@@ -559,7 +559,7 @@ onLoginAdvice(function(mensage)
     TFragMensal = mensage:sub(59, 64)
             --say(TFragMensal)
     Fragdiario = tonumber(TFragdiario:match('%d+'))
-            --info(Fragdiario)
+            info(Fragdiario)
     FragSemanal = tonumber(TFragsemanal:match('%d+'))
                 --info(FragSemanal)
     FragMensal = tonumber(TFragMensal:match('%d+'))
@@ -576,7 +576,7 @@ onLoginAdvice(function(mensage)
     FragSlimit = FragSemanalServer - 1
     FragMlimit = FragMensalServer - 1
       closeLoginAdvice()
-info('LimiteD: ' .. Fragdlimit)
+--info('LimiteD: ' .. Fragdlimit)
 --info('LimiteS: ' .. FragSlimit)
 --info('LimiteM: ' .. FragMlimit)
   end
