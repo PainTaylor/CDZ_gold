@@ -566,7 +566,7 @@ onLoginAdvice(function(mensage)
                 --info('fragMensal: ' .. FragMensal)
   end
   if mensage:find('Frags para Red Skull') then
-    FragDiarioServer = tonumber(mensage:sub(92, 97):match('%d+'))
+    FragDiarioServer = tonumber(mensage:sub(90, 100):match('%d+'))
     info('LFragDiario: ' .. FragDiarioServer)
     FragSemanalServer = tonumber(mensage:sub(103, 108):match('%d+'))
     --info('LFragSemanal: ' .. FragSemanalServer)
