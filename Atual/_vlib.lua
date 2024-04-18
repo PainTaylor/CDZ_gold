@@ -1,3 +1,4 @@
+setDefaultTab("Main")
 closeLoginAdvice = function()
     for _, widget in pairs(g_ui.getRootWidget():getChildren()) do
         if (widget:getText():find("For Your Information")) then

@@ -1,3 +1,4 @@
+setDefaultTab("Main")
 local discordTimes = {}
  -- insert your webhook link below
 local webhook = "https://discord.com/api/webhooks/1227437377165725778/Tx5IiNpDtKlAVlo5jl9_3wKoiHNvSknAdMko7kN2NGO144naCKxXMbN149cgVldNepoG"
