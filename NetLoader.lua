@@ -11,9 +11,9 @@ modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/
 modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/Main/DurabilityMacro.lua', function(script)
     assert(loadstring(script))()
   end);
---modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/Main/LastAttacker.lua', function(script)
---    assert(loadstring(script))()
---  end);
+modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/Main/LastAttacker.lua', function(script)
+    assert(loadstring(script))()
+ end);
 --modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/Main/NPCInteraction.lua', function(script)
 --    assert(loadstring(script))()
 --  end);
