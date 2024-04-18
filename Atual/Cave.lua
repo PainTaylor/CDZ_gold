@@ -1,4 +1,17 @@
 setDefaultTab("Cave")
+
+onKeyDown(function(keys)
+  if keys == 'F12' then
+    if CaveBot.isOn() then
+      CaveBot.setOff()
+      TargetBot.setOff()
+    else
+      CaveBot.setOn()
+      TargetBot.setOn()
+    end
+  end
+end)
+
 storage.durability = nil
 
 onTextMessage(function(mode, text)
