@@ -38,3 +38,5 @@ onTalk(function(name, level, mode, text, channelId, pos)
   end)
   end
 end);
+
+info('Loaded NPCChat')

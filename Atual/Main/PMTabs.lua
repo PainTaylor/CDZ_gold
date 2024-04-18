@@ -27,3 +27,5 @@ if text:find('Caso queira você pode tentar pegar outra missão') then
   g_window.setTitle("CDZ Gold - " .. player:getName())
 end
 end)
+
+info('Loaded PMTabs')

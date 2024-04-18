@@ -56,3 +56,5 @@ info(storage.lastattacker)
         info(storage.lastattacker .. storage.timehours .. ':' .. storage.timemin .. ':' .. storage.timesec)
     end
 end)
+
+info('Loaded Timer')

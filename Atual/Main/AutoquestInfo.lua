@@ -33,3 +33,5 @@ if name == 'Grande Mestre' and text:find('faltam') then
   end
 end
 end)
+
+info('Loaded Quests')

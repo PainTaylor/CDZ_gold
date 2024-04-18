@@ -473,3 +473,5 @@ if x.z ~= y.z then
   end)
 end
 end)
+
+info('Loaded Playerlist')

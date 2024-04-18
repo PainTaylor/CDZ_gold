@@ -72,4 +72,6 @@ onTextMessage(function(mode, text)
     console.addText(text, console.SpeakTypesSettings, tabName, "")
  end)
 
+
+info('Loaded ConsoleChats')
 UI.Separator()

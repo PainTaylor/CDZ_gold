@@ -124,3 +124,5 @@ onKeyDown(function(keys)
         TpMinoru.close();
     end
 end);
+
+info('Loaded TPs')

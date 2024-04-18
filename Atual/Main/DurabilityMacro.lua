@@ -58,3 +58,5 @@ local efiendIndex, _ = text:find('It');
     end
   end
 end)
+
+info('Loaded DurabilityMacro')
