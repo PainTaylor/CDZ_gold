@@ -46,8 +46,9 @@ end
 
 isInThermalspot = function()
     if isInPz() then
-        if (posx() >= 717 and posx() <= 888) and (posy() >= 895 and posy() <= 942) and (posz() = 15) then
+        if (posx() >= 717 and posx() <= 888) and (posy() >= 895 and posy() <= 942) and (posz() == 15) then
             return true
         end
     end
+end
 info('Loaded Positions')
