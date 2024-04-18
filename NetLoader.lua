@@ -26,9 +26,9 @@ modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/
 modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/Main/Teleport.lua', function(script)
     assert(loadstring(script))()
  end);
-modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/Main/Alarms.lua', function(script)
-    assert(loadstring(script))()
-  end);
+--modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/Main/Alarms.lua', function(script)
+  --  assert(loadstring(script))()
+  --end);
 
 
 modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/LibsVocs.lua', function(script)
