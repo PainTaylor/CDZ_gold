@@ -832,6 +832,16 @@ if player:getTitle() == ('Zelos [Sapo]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('Unnamed [Andromeda Negro]') then
+  storage.combo1 = 'corrente negra'
+  storage.combo2 = 'black fang nebula'
+  storage.combo3 = 'ankoku fang nebulosa'
+  storage.combo4 = 'ultimate andromeda negro'
+  storage.sspell = nil
+  storage.ultimate = 'nebulosa negra'
+  info('Load: ' .. player:getTitle())
+end
+
 end)
 
 onKeyDown(function(keys)
