@@ -1,3 +1,4 @@
+setDefaultTab("Main")
 storage.durability = nil
 onTextMessage(function(mode, text)
 local _, startIndex = text:find('Arm:');

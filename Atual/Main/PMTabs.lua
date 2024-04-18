@@ -1,3 +1,4 @@
+setDefaultTab("Main")
 local privateTabs = addSwitch("openPMTabs", "PM Tabs", function(widget) widget:setOn(not widget:isOn()) storage.OpenPrivateTabs = widget:isOn() end, parent)
 privateTabs:setOn(storage.OpenPrivateTabs)
 

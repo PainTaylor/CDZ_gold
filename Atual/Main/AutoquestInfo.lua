@@ -1,3 +1,4 @@
+setDefaultTab("Main")
 onTextMessage(function(mode, text)
   if text:find('Completo') then
     if text:find('Graad') then

@@ -1,3 +1,4 @@
+setDefaultTab("Main")
 local panelName = "playerList"
   local ui = setupUI([[
 Panel

@@ -1,3 +1,4 @@
+setDefaultTab("Main")
 UI.Separator()
 
 if not storage.timers then  storage.timers = {  time = 1 } end

@@ -1,3 +1,4 @@
+setDefaultTab("Main")
 onTalk(function(name, level, mode, text, channelId, pos)
   if (name ~= 'Blessing') then return; end              
   if (mode ~= 51) then return; end

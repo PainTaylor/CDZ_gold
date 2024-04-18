@@ -1,3 +1,4 @@
+setDefaultTab("Main")
 local windowUI = setupUI([[
 MainWindow
   id: main

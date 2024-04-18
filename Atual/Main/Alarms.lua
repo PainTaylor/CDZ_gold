@@ -1,3 +1,4 @@
+setDefaultTab("Main")
 local panelName = "alarms"
 local ui = setupUI([[
 Panel

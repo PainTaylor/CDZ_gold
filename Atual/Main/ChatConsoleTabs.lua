@@ -1,3 +1,4 @@
+setDefaultTab("Main")
 local function add(t, text, color, last)
   table.insert(t, text)
   table.insert(t, color)
