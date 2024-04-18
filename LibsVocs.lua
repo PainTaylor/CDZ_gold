@@ -332,7 +332,7 @@ if player:getTitle() == ('Shura Renegado [Capricornio]' or 'Shura [Capricornio]'
   info('Load: ' .. player:getTitle())
 end
 
-if player:getTitle() == ('Dante [Cerberus]') then
+if player:getTitle() == ('Dante [Cerberus]') or player:getTitle() == ('Dante Renegado [Cerberus]') then
  storage.combo1 = 'Maca Infernal'
  storage.combo2 = 'Jigoku no Kokyusa'
  storage.combo3 = 'Maca Vital'
