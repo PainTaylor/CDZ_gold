@@ -49,10 +49,8 @@ deathLabel = UI.Label("Death count: " .. deathCount)
 
 if deathCount >= logoutDeaths then
   CaveBot:setOff()
-  warn("Death Count Logout")
   schedule(5000, function()
   storage["death"].count = 0
-    modules.game_interface.tryLogout(false)
   end)
 end
 
