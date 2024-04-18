@@ -12,4 +12,4 @@ dofile("/targetbot/walking.lua")
 -- main targetbot file, must be last
 dofile("/targetbot/target.lua")
 
-info('Loaded Target')
+--info('Loaded Target')

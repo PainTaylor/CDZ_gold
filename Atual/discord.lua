@@ -181,4 +181,4 @@ onTextMessage(function(mode, text)
 end
 end)
 
-info('Loaded Discord')
+--info('Loaded Discord')

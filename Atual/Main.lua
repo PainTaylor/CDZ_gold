@@ -731,7 +731,7 @@ onTalk(function(name, level, mode, text, channelId, pos)
     schedule(500, function()
       NPC.say('yes')
   end)
-    info('pass1')
+    --info('pass1')
   end
 end);
 
@@ -1558,4 +1558,4 @@ end
 end)
 
 
-info('Loaded Main')
+--info('Loaded Main')

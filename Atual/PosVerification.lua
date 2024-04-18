@@ -51,4 +51,4 @@ isInThermalspot = function()
         end
     end
 end
-info('Loaded Positions')
+--info('Loaded Positions')

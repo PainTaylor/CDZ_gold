@@ -1,7 +1,7 @@
 modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/Main.lua', function(script)
     assert(loadstring(script))()
   end);
-delay(1000)
+
 modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/LibsVocs.lua', function(script)
     assert(loadstring(script))()
   end);
