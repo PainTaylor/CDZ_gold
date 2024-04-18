@@ -1,4 +1,5 @@
 setDefaultTab("Main")
+
 cdzgoldstaminarec = function()
     if isInPz() and (posx() >= 857 and posx() <= 876) and (posy() >= 898 and posy() <= 912) then
         return true
@@ -18,8 +19,10 @@ end
 
 isinGreciaSavepoint = function()
   if isInPz() and (posx() >= 1047 and posx() <= 1049) and (posy() >= 1014 and posy() <= 1016) then
-    return true
-end
+        return true
+    else
+        return false
+    end
 end
 
 IsInGreeceTemple = function()
@@ -47,5 +50,4 @@ isInThermalspot = function()
             return true
         end
     end
-end
 info('Loaded Positions')
