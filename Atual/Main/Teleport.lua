@@ -1,4 +1,3 @@
-
 local windowUI = setupUI([[
 MainWindow
   id: main
