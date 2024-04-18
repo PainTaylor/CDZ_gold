@@ -1555,3 +1555,6 @@ for _, scripts in ipairs({storage.ingame_macros, storage.ingame_hotkeys}) do
 end
 
 UI.Separator()
+
+
+info('Loaded Main')

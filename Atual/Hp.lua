@@ -34,3 +34,5 @@ itemhealmacro = macro(200, 'Item heal', function()
 end)
 
 UI.Separator()
+
+info('Loaded Def')

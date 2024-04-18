@@ -180,3 +180,5 @@ onTextMessage(function(mode, text)
  end
 end
 end)
+
+info('Loaded Discord')

@@ -287,3 +287,5 @@ if g_game.isAttacking() then return end
 end)
 
 UI.Separator()
+
+info('Loaded Atk')

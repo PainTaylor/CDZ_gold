@@ -839,3 +839,4 @@ if keys == 'Ctrl+0' then
  say(player:getTitle())
 end
 end)
+

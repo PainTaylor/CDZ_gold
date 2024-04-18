@@ -105,3 +105,4 @@ dofile("/cavebot/supply.lua")
 dofile("/cavebot/cavebot.lua")
 
 
+info('Loaded Cave')

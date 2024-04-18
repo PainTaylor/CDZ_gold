@@ -48,3 +48,4 @@ isInThermalspot = function()
         end
     end
 end
+info('Loaded Positions')
