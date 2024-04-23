@@ -592,12 +592,3 @@ if keys == 'Ctrl+]' then
 say('!deathlist ' .. player:getName())
 end
 end)
-
-onTalk(function(name, level, mode, text, channelId, pos)
-if name ~= player:getName() and not text:find('!D ') then return end
-        startindex = text:find('!D ')
-        endindex = text:find('.')
-        nickd = text:sub(startindex, endindex-1)
-        info(nickd)
-        say('!deathlist ' .. nickd)
-end)
