@@ -582,3 +582,13 @@ end)
 timefragmensal:setPosition({y = yfrag+30, x =  xfrag})
 
 --info('Loaded Tools')
+
+
+onKeyPress(function(keys)
+if keys == 'Ctrl+[' then
+say('!rank level, ' .. player:getTitle())
+end
+if keys == 'Ctrl+]' then
+say('!deathlist ' .. player:getName())
+end
+end)
