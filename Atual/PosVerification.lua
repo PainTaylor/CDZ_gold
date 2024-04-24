@@ -51,4 +51,9 @@ isInThermalspot = function()
         end
     end
 end
+
+AiolosCaveFull = function()
+(posx() >= 883 and posx() <= 1013 ) and (posy() <= 1699 and posy() >= 1616) then
+    return true
+end
 --info('Loaded Positions')
