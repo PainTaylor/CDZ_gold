@@ -40,7 +40,7 @@ end
 
 isinGreciaCity = function()
     if (posx() >= 983 and posx() <= 1082) and (posy() >= 982 and posy() <= 1060) and (posz() >= 6 and posz() <= 7) then
-    return true
+        return true
     end
 end
 
@@ -53,7 +53,8 @@ isInThermalspot = function()
 end
 
 AiolosCaveFull = function()
-(posx() >= 883 and posx() <= 1013 ) and (posy() <= 1699 and posy() >= 1616) then
-    return true
+    if (posx() >= 883 and posx() <= 1013 ) and (posy() <= 1699 and posy() >= 1616) then
+        return true
+    end
 end
 --info('Loaded Positions')
