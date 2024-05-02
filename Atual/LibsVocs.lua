@@ -852,6 +852,25 @@ if player:getTitle() == ('Poseidon [Deus]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('Kanon [Dragao Marinho]') then
+  storage.combo1 = 'genromaoken'
+  storage.combo2 = 'marine destruction'
+  storage.combo3 = 'great marine destruction'
+  storage.combo4 = 'ultimate dragao marinho'
+  storage.sspell = nil
+  storage.ultimate = 'triangulo marinho'
+  info('Load: ' .. player:getTitle())
+end
+
+if player:getTitle() == ('Unity [Dragao Marinho]') then
+  storage.combo1 = 'vento artico'
+  storage.combo2 = 'divine marine destruction'
+  storage.combo3 = 'trovao divino'
+  storage.combo4 = 'ultimate poseidon'
+  storage.sspell = nil
+  storage.ultimate = 'tsunami devastador'
+  info('Load: ' .. player:getTitle())
+end
 
 end)
 
