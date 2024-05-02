@@ -872,6 +872,16 @@ if player:getTitle() == ('Unity [Dragao Marinho]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('Unity [Dragao Marinho]') then
+  storage.combo1 = 'akubensu'
+  storage.combo2 = 'sekishiki meikai'
+  storage.combo3 = 'sekishiki kisoen'
+  storage.combo4 = 'ultimate cancer'
+  storage.sspell = 'yomotsu shield'
+  storage.ultimate = 'ondas do inferno'
+  info('Load: ' .. player:getTitle())
+end
+
 end)
 
 onKeyDown(function(keys)
