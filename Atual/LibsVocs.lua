@@ -872,7 +872,7 @@ if player:getTitle() == ('Unity [Dragao Marinho]') then
   info('Load: ' .. player:getTitle())
 end
 
-if player:getTitle() == ('Unity [Dragao Marinho]') then
+if player:getTitle() == ('Mascara da Morte Renegado [Cancer]') then
   storage.combo1 = 'akubensu'
   storage.combo2 = 'sekishiki meikai'
   storage.combo3 = 'sekishiki kisoen'
