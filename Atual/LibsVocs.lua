@@ -548,7 +548,7 @@ if player:getTitle() == ('Algeth [Hercules]') then
  storage.combo3 = 'Kornephoros'
  storage.combo4 = 'ultimate hercules'
  storage.sspell = nil
- storage.ultimate = nil
+ storage.ultimate = 'protecao de hercules'
   info('Load: ' .. player:getTitle())
 end
 
@@ -558,7 +558,7 @@ if player:getTitle() == ('Algeth Renegado [Hercules]') then
  storage.combo3 = 'Kornephoros'
  storage.combo4 = 'ultimate hercules'
  storage.sspell = nil
- storage.ultimate = nil
+ storage.ultimate = 'protecao de hercules'
   info('Load: ' .. player:getTitle())
 end
 
