@@ -2,16 +2,16 @@ setDefaultTab("Main")
 onTextMessage(function(mode, text)
   if text:find('Completo') then
     if text:find('Graad') then
-      quest = 'graad'
+      storage.quest = 'graad'
     end
     if text:find('Cassius') then
-      quest = 'cassios'
+      storage.quest = 'cassios'
     end
     if text:find('Soldier') then
-      quest = 'soldier'
+      storage.quest = 'soldier'
     end
     if text:find('Daichi') then
-      quest = 'daichi'
+      storage.quest = 'daichi'
     end
   end
 end)
@@ -21,16 +21,16 @@ end)
 onTalk(function(name, level, mode, text, channelId, pos)
 if name == 'Grande Mestre' and text:find('faltam') then
   if text:find('Cassius') then
-    actualquest = 'cassios'
+    storage.actualquest = 'cassios'
   end
   if text:find('Soldiers') then
-    actualquest = 'soldier'
+    storage.actualquest = 'soldier'
   end
   if text:find('Daichi') then
-    actualquest = 'daichi'
+    storage.actualquest = 'daichi'
   end
   if text:find('Graad') then
-    actualquest = 'graad'
+    storage.actualquest = 'graad'
   end
 end
 end)
