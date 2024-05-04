@@ -212,6 +212,7 @@ end
 spotedspecs = {}
 
 onTextMessage(function(mode, text)
+  if text:find('attack by an ') then return end
       for pname, _ in pairs(spotedspecs) do
         if not getCreatureByName(pname) then
             spotedspecs[pname] = nil
