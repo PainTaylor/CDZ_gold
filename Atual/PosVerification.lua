@@ -3,9 +3,6 @@ setDefaultTab("Main")
 cdzgoldstaminarec = function()
     if isInPz() and (posx() >= 857 and posx() <= 876) and (posy() >= 898 and posy() <= 912) and (posz() == 15) then
         return true
-    else
-        return false
-    end
 end
 
 isinAriesSavepoint = function()
