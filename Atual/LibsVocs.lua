@@ -512,6 +512,16 @@ if player:getTitle() == ('Misty [Lagarto]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('Misty Renegado [Lagarto]') then
+ storage.combo1 = 'Furacao das Trevas'
+ storage.combo2 = 'Mavrou Trypa'
+ storage.combo3 = 'Dark Hurricane'
+ storage.combo4 = 'ultimate lagarto'
+ storage.sspell = nil
+ storage.ultimate = 'paredao de ar'
+  info('Load: ' .. player:getTitle())
+end
+
 if player:getTitle() == ('Afrodite Renegado [Peixes]') then
  storage.combo1 = 'Rosas Diabolicas'
  storage.combo2 = 'Rosas Piranhas'
