@@ -3,6 +3,7 @@ setDefaultTab("Main")
 cdzgoldstaminarec = function()
     if isInPz() and (posx() >= 857 and posx() <= 876) and (posy() >= 898 and posy() <= 912) and (posz() == 15) then
         return true
+    end
 end
 
 isinAriesSavepoint = function()
@@ -53,4 +54,5 @@ AiolosCaveFull = function()
     if (posx() >= 883 and posx() <= 1013 ) and (posy() <= 1699 and posy() >= 1616) then
         return true
     end
+end
 --info('Loaded Positions')
