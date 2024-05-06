@@ -275,10 +275,10 @@ end
 if player:getTitle() == ('Minos [Griffon]') then
  storage.combo1 = 'papusa cosmica'
  storage.combo2 = 'griffon strike'
- storage.combo3 = 'marionete cosmica'
+ storage.combo3 = 'marionete'
  storage.combo4 = 'ultimate griffon'
  storage.sspell = nil
- storage.ultimate = nil
+ storage.ultimate = 'marionete cosmica'
   info('Load: ' .. player:getTitle())
 end
 
