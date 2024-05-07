@@ -892,6 +892,16 @@ if player:getTitle() == ('Mascara da Morte Renegado [Cancer]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('Ikki [Leao]') then
+  storage.combo1 = 'capsula do poder da fenix'
+  storage.combo2 = 'golpe de fenix relampago'
+  storage.combo3 = 'phoenix lightning plasma'
+  storage.combo4 = 'ultimate leao'
+  storage.sspell = nil
+  storage.ultimate = nil
+  info('Load: ' .. player:getTitle())
+end
+
 end)
 
 onKeyDown(function(keys)
