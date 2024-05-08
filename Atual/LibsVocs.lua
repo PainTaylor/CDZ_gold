@@ -472,6 +472,17 @@ if player:getTitle() == ('Capella [Auriga]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('Capella Renegado [Auriga]') then
+ storage.combo1 = 'discos mortais'
+ storage.combo2 = 'saucer kogeki'
+ storage.combo3 = 'ripping saucers'
+ storage.combo4 = 'ultimate auriga'
+ storage.sspell = nil
+ storage.ultimate = nil
+  info('Load: ' .. player:getTitle())
+end
+
+
 if player:getTitle() == ('Shiva [Pavao]') then
  storage.combo1 = 'golpe dos mil bracos'
  storage.combo2 = 'senju shinon ken'
@@ -901,6 +912,7 @@ if player:getTitle() == ('Ikki [Leao]') then
   storage.ultimate = nil
   info('Load: ' .. player:getTitle())
 end
+
 
 end)
 
