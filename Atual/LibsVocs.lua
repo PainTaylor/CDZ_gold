@@ -913,6 +913,16 @@ if player:getTitle() == ('Ikki [Leao]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('Golfinho [Fantasma]') then
+  storage.combo1 = 'golpe do golfinho'
+  storage.combo2 = 'dolphin ryukuchu kaiten'
+  storage.combo3 = 'explosive dolphin blow'
+  storage.combo4 = 'ultimate golfinho'
+  storage.sspell = nil
+  storage.ultimate = nil
+  info('Load: ' .. player:getTitle())
+end
+
 
 end)
 
