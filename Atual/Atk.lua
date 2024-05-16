@@ -291,7 +291,7 @@ UI.Separator()
 --info('Loaded Atk')
 
 
-setDefaultTab("Tools")
+setDefaultTab("Atk")
 
 local friendList = {'Paintaylor', 'Hellkays', 'Shurado', 'Gakido', 'Nigendo', 'Tendo', 'Jigokudo', 'Chikushodo', 'Found', 'Isawhim', 'Isawevenrything', 'Icanseeu','Valdez', 'Valdez Maker Um', 'Ysuka', 'Albatrxz', 'Poeta Mudo', 'Gabi', 'Sektr', 'Jabu', 'Aiolos', 'Perii', '', '', '', '', '', '', '', '', ''}
 
