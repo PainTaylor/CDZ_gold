@@ -26,74 +26,97 @@ storage.durability = 0
 end
 end)
 
-storage.timecheck = now
-
-macro(100, 'Check Armor', function()
-  if storage.timecheck < now then
-  storage.timecheck = now + 60000
-  g_game.look(getInventoryItem(SlotBody))
-end
-end)
-
 UI.TextEdit(storage.mindurability or "80", function(widget, newText)
 storage.mindurability = newText
 end)
 
 Backincave = macro(200, '100%',function()end)
 
-local logoutDeaths = 5  -- numero de mortes
-if type(storage["death"]) ~= "table" then storage["death"] = { count = 0 } end
-local deathCount = storage["death"].count
 UI.Separator()
-deathLabel = UI.Label("Death count: " .. deathCount)
-
-if deathCount >= logoutDeaths then
-  CaveBot:setOff()
-  schedule(5000, function()
-  storage["death"].count = 0
-  end)
-end
-
-if deathCount >= 4 then
-  deathLabel:setColor("red")
-elseif deathCount >= 2 then
-  deathLabel:setColor("orange")
-else
-  deathLabel:setColor("green")
-end
-
-UI.Button("Reset Deaths", function()
-  storage["death"].count = 0
-  deathLabel:setText("Death count: " .. storage["death"].count)
-  deathLabel:setColor("green")
-end )
-
-local macroDeathCount = macro(1000, "Death Counter", function()
-
-for i, rootW in pairs(g_ui.getRootWidget():getChildren()) do
-  if rootW:getText() == "You are dead" then
-    storage["death"].count = storage["death"].count + 1
-    deathLabel:setText("Death count: " .. storage["death"].count)
-    modules.client_entergame.CharacterList.doLogin()
+--------------------------------------------------------
+safecavebot = macro(2000, 'SafeCavebot', function()end)
+CountDeath = function()
+    if storage.countdeath == nil then
+        storage.countdeath = 0
     end
-  end
+    storage.countdeath = storage.countdeath + 1
+end
+
+cavebotdelay = function(death)
+    if storage.countdeath then
+        death = storage.countdeath
+    end
+    delay(300000 * death)
+end
+
+onTextMessage(function(mode, text)
+    if safecavebot.isOff() then return end
+    if text:find("You are dead") then
+        CountDeath()
+    end
 end)
 
-UI.Separator()
+macro(200, function()
+    if safecavebot.isOff() then return end
+    if storage.countdeath >= 5 then
+        CaveBot.setOff()
+    end
+end)
 
--- Cavebot by otclient@otclient.ovh
--- visit http://bot.otclient.ovh/
+onKeyDown(function(keys)
+    if keys == 'Ctrl+0' then
+        storage.countdeath = 0
+    end
+end)
+
+onCreatureAppear(function(creature)
+    if isinGreciaCity() then return end
+    if isEnemy(creature) then
+        safecavebot.setOn()
+    end
+end)
+
+---------------------------------------
+
+xth = 700
+yth = 10
+
+local widget = setupUI([[
+Panel
+  height: 400
+  width: 900
+]], g_ui.getRootWidget())
+
+local deaths = g_ui.loadUIFromString([[
+Label
+  color: white
+  background-color: black
+  opacity: 0.85
+  text-horizontal-auto-resize: true  
+]], widget)
+
+ 
+
+macro(1, function()
+    if storage.countdeath then
+    deaths:setColor('blue')
+    deaths:setText("Deaths: " .. storage.countdeath .. ' ')
+    if storage.countdeath == 4 then
+    deaths:setColor('yellow')
+        elseif storage.countdeath >= 5 then
+    deaths:setColor('red')
+    deaths:setText("Deaths: " .. storage.countdeath .. ' Press Ctrl + 0 to reset ')
+end
+end
+end)
+
+ 
+
+deaths:setPosition({y = yth, x =  xth})
+
+--------------------------------------------------------------
 
 setDefaultTab("Cave")
-
-macro(200, 'safe hunt', function()
-if hppercent() < 50 then
-CaveBot.setOff()
-end
-if hppercent() == 100 and manapercent() == 100 then
-CaveBot.setOn()
-end
-end)
 
 
 CaveBot = {} -- global namespace
