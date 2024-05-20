@@ -57,7 +57,7 @@ onTextMessage(function(mode, text)
 end)
 
 macro(200, function()
-    if safecavebot.isOff() then return end
+    if safecavebot.isOff() or storage.countdeath == nil then return end
     if storage.countdeath >= 5 then
         CaveBot.setOff()
     end
