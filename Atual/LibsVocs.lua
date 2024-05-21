@@ -923,6 +923,26 @@ if player:getTitle() == ('Golfinho [Fantasma]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('Shion [Aries]') then
+  storage.combo1 = 'kurisutaru woru'
+  storage.combo2 = 'sutadasuto reboryushon'
+  storage.combo3 = 'destruction of aries'
+  storage.combo4 = 'ultimate shion'
+  storage.sspell = nil
+  storage.ultimate = 'revolucao divina'
+  info('Load: ' .. player:getTitle())
+end
+
+if player:getTitle() == ('Shion Renegado [Aries]') then
+  storage.combo1 = 'luz estelar'
+  storage.combo2 = 'revolucao da poeira estelar'
+  storage.combo3 = 'destruicao maxima de aries'
+  storage.combo4 = 'ultimate aries renegado'
+  storage.sspell = nil
+  storage.ultimate = 'sobrepelis estelar'
+  info('Load: ' .. player:getTitle())
+end
+
 
 end)
 
