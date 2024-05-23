@@ -18,7 +18,7 @@ end);
 
 
 onTalk(function(name, level, mode, text, channelId, pos)
-  if (name ~= 'Mu [Durability]') then return; end              
+  if (name ~= 'Mu [Durability]') then return; end
   if (mode ~= 51) then return; end
   if (text:find('posso restaurar a durabilidade dos seus itens. Basta me dizer qual slot gostaria de restaurar')) then
     schedule(500, function()
