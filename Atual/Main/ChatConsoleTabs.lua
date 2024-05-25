@@ -76,3 +76,13 @@ onTextMessage(function(mode, text)
 
 info('Loaded ConsoleChats')
 UI.Separator()
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if text:find('.55 pode entrar galera') then
+NPC.say('hi')
+NPC.say('participar')
+NPC.say('yes')
+TargetBot.setOn()
+TargetBot.setCurrentProfile('Others_no_loot')
+end
+end)
