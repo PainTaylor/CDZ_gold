@@ -77,12 +77,21 @@ onTextMessage(function(mode, text)
 info('Loaded ConsoleChats')
 UI.Separator()
 
+
+MacroAtkMob = macro(20, 'MonsterATk', function()
+if g_game.isAttacking() then return end
+    for _, spec in ipairs(getSpectators()) do
+        if spec:isMonster() then
+            g_game.attack(creature)
+        end
+    end
+end)
+
 onTalk(function(name, level, mode, text, channelId, pos)
 if text:find('.55 pode entrar galera') then
 NPC.say('hi')
 NPC.say('participar')
 NPC.say('yes')
-TargetBot.setOn()
-TargetBot.setCurrentProfile('Others_no_loot')
+MacroAtkMob.setOn()
 end
 end)
