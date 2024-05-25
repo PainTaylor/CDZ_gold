@@ -55,4 +55,11 @@ AiolosCaveFull = function()
         return true
     end
 end
+
+
+sagatrap = function()
+    if (posx() >= 1288 and posx() <= 1343 ) and (posy() <= 1112 and posy() >= 1081) and posz() == 15 then
+        return true
+    end
+end
 --info('Loaded Positions')
