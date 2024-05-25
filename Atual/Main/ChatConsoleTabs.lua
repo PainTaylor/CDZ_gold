@@ -78,21 +78,11 @@ info('Loaded ConsoleChats')
 UI.Separator()
 
 
-MacroAtkMob = macro(200, 'MonsterATk', function()
-if g_game.isAttacking() then return end
-    for _, spec in ipairs(getSpectators()) do
-        if spec:isMonster() then
-            g_game.attack(creature)
-        end
-        delay(1500)
-    end
-end)
-
 onTalk(function(name, level, mode, text, channelId, pos)
 if text:find('.55 pode entrar galera') then
 NPC.say('hi')
 NPC.say('participar')
 NPC.say('yes')
-MacroAtkMob.setOn()
+--MacroAtkMob.setOn()
 end
 end)
