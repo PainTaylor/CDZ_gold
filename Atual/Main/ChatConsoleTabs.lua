@@ -84,6 +84,7 @@ if g_game.isAttacking() then return end
         if spec:isMonster() then
             g_game.attack(creature)
         end
+        delay(1500)
     end
 end)
 
