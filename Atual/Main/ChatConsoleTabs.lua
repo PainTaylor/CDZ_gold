@@ -78,7 +78,7 @@ info('Loaded ConsoleChats')
 UI.Separator()
 
 
-MacroAtkMob = macro(20, 'MonsterATk', function()
+MacroAtkMob = macro(200, 'MonsterATk', function()
 if g_game.isAttacking() then return end
     for _, spec in ipairs(getSpectators()) do
         if spec:isMonster() then
