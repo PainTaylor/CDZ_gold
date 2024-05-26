@@ -54,22 +54,14 @@ end
 
  onTextMessage(function(mode, text)
   if not text:find('Loot of') then return end
-   if text:find('Lendario') then
-     raridade = 'Lendario'
-   elseif text:find('Épico') then
-     raridade = 'Epico'
-   end
-   
+   if text:find('Lendario') or text:find('pico') then   
    local data = {
      title = 'Drop',
      name = player:getName(),
      message = text .. ' Loc: X: '.. posx() .. 'Y: ' .. posy() .. 'Z: ' .. posz(),
      id = "pd",
    }
-   
-   if raridade ~= '' then
      sendDiscordWebhook(data)
-     raridade = ''
    end
  end)
 -------------------------------------------------------------------------------------------------------------------------
