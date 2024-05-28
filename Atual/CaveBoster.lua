@@ -40,7 +40,7 @@ if text:find('Bonus ativado') then
 	if text:find('+5%%') then
 		storage.star5active = true
 		storage.star5 = now + 1800000
-	end
+	end	
 	if text:find('+15%%') then
 		storage.star15active = true
 		storage.star15 = now + 1800000
