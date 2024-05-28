@@ -31,6 +31,7 @@ if player:getLevel() >= 300 then
 totalbonus = '115'
 else
 totalbonus = '65'
+end
 if text:find(totalbonus) then
 storage.itemxp = now + 1800000
 end
