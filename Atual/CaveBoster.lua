@@ -1,4 +1,5 @@
 setDefaultTab("Cave")
+
 storage.itemxp = now
 macro(200, 'XpBooster', function()
 if storage.itemxp < now then
@@ -36,5 +37,19 @@ end)
 onTextMessage(function(mode, text)
 if text:find('Bonus de loot') then
 storage.itemloot = now + 1800000
+end
+end)
+
+
+storage.itemloot = now
+macro(200, 'Totem Bost', function()
+if storage.itemloot < now then
+usewith(14198, player:getPosition())
+end
+end)
+
+onTextMessage(function(mode, text)
+if text:find('um totem') then
+storage.itemloot = now + 3600000
 end
 end)
