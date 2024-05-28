@@ -78,7 +78,7 @@ end)
 storage.itemloot = now
 macro(200, 'Totem Bost', function()
 if storage.itemloot < now then
-usewith(14198)
+useWith(14198, player)
 end
 end)
 
