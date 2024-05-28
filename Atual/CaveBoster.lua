@@ -37,23 +37,23 @@ end
 
 onTextMessage(function(mode, text)
 if text:find('Bonus ativado') then
-	if text:find('+5%') then
+	if text:find('+5%%') then
 		storage.star5active = true
 		storage.star5 = now + 1800000
 	end
-	if text:find('+15%') then
+	if text:find('+15%%') then
 		storage.star15active = true
 		storage.star15 = now + 1800000
 	end
-	if text:find('+20%') then
+	if text:find('+20%%') then
 		storage.star20active = true
 		storage.star20 = now + 1800000
 	end
-	if text:find('+25%') then
+	if text:find('+25%%') then
 		storage.star25active = true
 		storage.star25 = now + 1800000
 	end
-	if text:find('+50%') then
+	if text:find('+50%%') then
 		storage.star50active = true
 		storage.star50 = now + 1800000
 	end
