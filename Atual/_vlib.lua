@@ -1,3 +1,10 @@
+setDefaultTab("Cave")
+setDefaultTab("Disc")
+setDefaultTab("Target")
+setDefaultTab("Atk")
+setDefaultTab("Def")
+setDefaultTab("Tools")
+setDefaultTab("Main")
 setDefaultTab("Main")
 closeLoginAdvice = function()
     for _, widget in pairs(g_ui.getRootWidget():getChildren()) do
