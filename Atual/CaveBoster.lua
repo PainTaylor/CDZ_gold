@@ -18,19 +18,20 @@ macro(200, 'XpBooster', function()
 		use(14288)
 	end
 end)
-if storage.star5 = nil then
+
+if storage.star5 == nil then
 	storage.star5 = now
 end
-if storage.star15 = nil then
+if storage.star15 == nil then
 	storage.star15 = now
 end
-if storage.star20 = nil then
+if storage.star20 ==nil then
 	storage.star20 = now
 end
-if storage.star25 = nil then
+if storage.star25 == nil then
 	storage.star25 = now
 end
-if storage.star50 = nil then
+if storage.star50 == nil then
 	storage.star50 = now
 end
 
