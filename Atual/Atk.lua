@@ -1,7 +1,14 @@
 setDefaultTab("Atk")
 
+macro(1000, 'Special Cast', function()
+  if not g_game.isAttacking() then return end
+  if soul() == 200 then
+    say(storage.ultimate)
+  end
+end)
+
 macro(100, 'Combo', function()
- if not g_game.isAttacking() or (stop and stop >= now) then return end
+ if not g_game.isAttacking() then return end
   if player:getLevel() >= 250 then
    say(storage.combo4)
 end
