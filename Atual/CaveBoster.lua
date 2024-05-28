@@ -1,3 +1,4 @@
+setDefaultTab("Cave")
 storage.itemxp = now
 macro(200, 'XpBooster', function()
 if storage.itemxp < now then
