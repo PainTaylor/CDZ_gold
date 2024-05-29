@@ -949,7 +949,7 @@ if player:getTitle() == ('Ikki [Fenix Celeste]') then
   storage.combo3 = 'hoyoku tensho celeste'
   storage.combo4 = 'hoyoku tensho celeste'
   storage.sspell = nil
-  storage.ultimate = 'sobrepelis estelar'
+  storage.ultimate = nil
   info('Load: ' .. player:getTitle())
 end
 
