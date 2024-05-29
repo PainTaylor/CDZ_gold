@@ -1,6 +1,5 @@
 setDefaultTab("Cave")
 
-storage.itemxp = now
 macro(200, 'XpBooster', function()
 	if storage.star5 < now then
 		use(13282)
@@ -60,8 +59,9 @@ if text:find('Bonus ativado') then
 end
 end)
 
-
+if storage.itemloot = nil then
 storage.itemloot = now
+end
 macro(200, 'LootBoster', function()
 if storage.itemloot < now then
 use(14637)
@@ -74,16 +74,17 @@ storage.itemloot = now + 1800000
 end
 end)
 
-
-storage.itemloot = now
+if storage.totemxp = nil then
+storage.totemxp = now
+end
 macro(200, 'Totem Bost', function()
-if storage.itemloot < now then
+if storage.totemxp < now then
 useWith(14198, player)
 end
 end)
 
 onTextMessage(function(mode, text)
 if text:find('um totem') then
-storage.itemloot = now + 3600000
+storage.totemxp = now + 3600000
 end
 end)
