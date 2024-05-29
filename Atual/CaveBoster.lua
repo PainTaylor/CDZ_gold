@@ -59,7 +59,7 @@ if text:find('Bonus ativado') then
 end
 end)
 
-if storage.itemloot = nil then
+if storage.itemloot == nil then
 storage.itemloot = now
 end
 macro(200, 'LootBoster', function()
@@ -74,7 +74,7 @@ storage.itemloot = now + 1800000
 end
 end)
 
-if storage.totemxp = nil then
+if storage.totemxp == nil then
 storage.totemxp = now
 end
 macro(200, 'Totem Bost', function()
