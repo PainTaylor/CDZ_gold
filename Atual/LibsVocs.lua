@@ -943,6 +943,15 @@ if player:getTitle() == ('Shion Renegado [Aries]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('Ikki [Fenix Celeste]') then
+  storage.combo1 = 'ave fenix celeste'
+  storage.combo2 = 'golpe de fenix celeste'
+  storage.combo3 = 'hoyoku tensho celeste'
+  storage.combo4 = 'hoyoku tensho celeste'
+  storage.sspell = nil
+  storage.ultimate = 'sobrepelis estelar'
+  info('Load: ' .. player:getTitle())
+end
 
 end)
 
