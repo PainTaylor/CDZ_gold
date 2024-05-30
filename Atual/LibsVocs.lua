@@ -953,6 +953,16 @@ if player:getTitle() == ('Ikki [Fenix Celeste]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('Unity [Dragao Marinho]') then
+  storage.combo1 = 'sancto oricalco'
+  storage.combo2 = 'holy pillar'
+  storage.combo3 = 'santo pilar'
+  storage.combo4 = 'ultimate unity'
+  storage.sspell = nil
+  storage.ultimate = nil
+  info('Load: ' .. player:getTitle())
+end
+
 end)
 
 onKeyDown(function(keys)
