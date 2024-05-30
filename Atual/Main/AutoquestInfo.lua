@@ -53,6 +53,69 @@ if name == 'Grande Mestre' and text:find('faltam') then
 end
 end)
 
+mvphunt = macro(200, 'MVP Hunt', function() end)
+
+onTextMessage(function(mode, text)
+  if mvphunt.isOff() then return end
+  if text:find('MVP') then
+    if text:find('Cassius') then
+      mvpcassius = 1
+    end
+    if text:find('Daichi') then
+      mvpdaichi = 1
+    end
+    if text:find('Ushio') then
+      mvpushio = 1
+    end
+    if text:find('Ichi') then
+      mvpichi = 1
+    end
+    if text:find('Ban') then
+      mvpban = 1
+    end
+    if text:find('Geki') then
+      mvpgeki = 1
+    end
+    if text:find('Ritahoa') then
+      mvphitahoa = 1
+    end
+    if text:find('Shiryu') then
+      mvpshiryu = 1
+    end
+    if text:find('Ikki') then
+      mvpikki = 1
+    end
+    if text:find('Hyoga') then
+      mvphyoga = 1
+    end
+    if text:find('Zelos') then
+      mvpzelos = 1
+    end
+    if text:find('Algeth renegado') then
+      mvpalgethr = 1
+    end
+    if text:find('Algeth') then
+      mvpalgeth = 1
+    end
+    if text:find('Thetis') then
+      mvpthetis = 1
+    end
+    if text:find('Aldebaran') then
+      mvpaldebaran = 1
+    end
+    if text:find('Mascara Da Morte') then
+      mvpmdm = 1
+    end
+    if text:find('Mascara Da Mort Renegado') then
+      mvpmdmr = 1
+    end
+    if text:find('Afrodite') then
+      mvpafrodite = 1
+    end
+    if text:find('Aldebaran Divino') then
+      mvpaldebarand = 1
+    end
+  end
+end)
+
 info('Loaded Quests')
-
-
