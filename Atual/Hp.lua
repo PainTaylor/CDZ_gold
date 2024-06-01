@@ -35,4 +35,17 @@ end)
 
 UI.Separator()
 
+UI.Label('Hp Special')
+UI.TextEdit(storage.SpecialHP or "60", function(widget, newText)
+storage.SpecialHP = newText
+end)
+
+macro(200, 'Special Def', function()
+  if hppercent() < tonumber(storage.SpecialHP) then
+    say(storage.ultimate)
+  end
+end)
+
+UI.Separator()
+
 --info('Loaded Def')
