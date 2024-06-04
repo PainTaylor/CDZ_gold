@@ -74,6 +74,6 @@ modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/
 
 
 --Load Discord
-modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/discord.lua', function(script)
-   assert(loadstring(script))()
-  end);
+--modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/discord.lua', function(script)
+--   assert(loadstring(script))()
+--  end);
