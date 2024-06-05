@@ -62,4 +62,11 @@ sagatrap = function()
         return true
     end
 end
+
+AtlantisSorento1 = function()
+    if (posx() >= 1616 and posx() <= 1667 ) and (posy() <= 3631 and posy() >= 3579) and posz() == 6 then
+        return true
+    end
+end
+
 --info('Loaded Positions')
