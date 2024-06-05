@@ -51,20 +51,20 @@ isInThermalspot = function()
 end
 
 AiolosCaveFull = function()
-    if (posx() >= 883 and posx() <= 1013 ) and (posy() <= 1699 and posy() >= 1616) then
+    if (posx() >= 883 and posx() <= 1013) and (posy() <= 1699 and posy() >= 1616) then
         return true
     end
 end
 
 
 sagatrap = function()
-    if (posx() >= 1288 and posx() <= 1343 ) and (posy() <= 1112 and posy() >= 1081) and posz() == 15 then
+    if (posx() >= 1288 and posx() <= 1343) and (posy() <= 1112 and posy() >= 1081) and posz() == 15 then
         return true
     end
 end
 
 AtlantisSorento1 = function()
-    if (posx() >= 1616 and posx() <= 1667 ) and (posy() <= 3631 and posy() >= 3579) and posz() == 6 then
+    if (posx() >= 1616 and posx() <= 1667) and (posy() <= 3631 and posy() >= 3579) and (posz() == 6 or posz() == 5) then
         return true
     end
 end
