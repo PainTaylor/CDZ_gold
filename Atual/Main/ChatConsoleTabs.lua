@@ -36,15 +36,6 @@ onTextMessage(function(mode, text)
   t = {}
 end)
 
-local console = modules.game_console
-onTextMessage(function(mode, text)
-    if not text:find("The murder of") then return end
- -- get/create tab and write raw message
-    local tabName = "Frags Register"
-    local tab = console.getTab(tabName) or console.addTab(tabName, true)
-    console.addText(text, console.SpeakTypesSettings, tabName, "")
- end)
-
 onTextMessage(function(mode, text)
     if not text:find("Loot of") then return end
     if text:find('Lendario') or text:find('Epico') or text:find('Raro') or text:find('Incomum') then
