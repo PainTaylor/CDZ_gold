@@ -963,6 +963,16 @@ if player:getTitle() == ('Unity [Dragao Marinho]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('Io [Scylla]') then
+  storage.combo1 = 'aguia poderosa'
+  storage.combo2 = 'furia do lobo'
+  storage.combo3 = 'tornado violento'
+  storage.combo4 = 'ultimate scylla'
+  storage.sspell = nil
+  storage.ultimate = nil
+  info('Load: ' .. player:getTitle())
+end
+
 end)
 
 onKeyDown(function(keys)
