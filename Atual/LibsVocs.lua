@@ -947,7 +947,17 @@ if player:getTitle() == ('Ikki [Fenix Celeste]') then
   storage.combo1 = 'ave fenix celeste'
   storage.combo2 = 'golpe de fenix celeste'
   storage.combo3 = 'hoyoku tensho celeste'
-  storage.combo4 = 'hoyoku tensho celeste'
+  storage.combo4 = 'ultimate fenix celeste'
+  storage.sspell = nil
+  storage.ultimate = nil
+  info('Load: ' .. player:getTitle())
+end
+
+if player:getTitle() == ('Shiryu [Dragao Celeste]') then
+  storage.combo1 = 'colera do dragao celeste'
+  storage.combo2 = 'dragao voador celeste'
+  storage.combo3 = 'ultimo dragao celeste'
+  storage.combo4 = 'ultimate dragon celeste'
   storage.sspell = nil
   storage.ultimate = nil
   info('Load: ' .. player:getTitle())
