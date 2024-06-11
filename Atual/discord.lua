@@ -291,7 +291,6 @@ onTextMessage(function(mode, text)
     endindex = text:find('was')
     playername = player:getName()
     vitima = text:sub(startindex+3, endindex-2)
-    say('O Jogador ' .. playername .. ' Matou o Jogador ' .. vitima)
     local data = {
     title = 'Fragou',
     name = playername,
