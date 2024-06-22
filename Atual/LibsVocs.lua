@@ -984,7 +984,7 @@ if player:getTitle() == ('Io [Scylla]') then
 end
 
 
-if player:getTitle() == ('Io [Scylla]') then
+if player:getTitle() == ('Thanatos [Deus Da Morte]') then
   storage.combo1 = 'teriburu purobidensu'
   storage.combo2 = 'divine punishment'
   storage.combo3 = 'terrivel providencia'
