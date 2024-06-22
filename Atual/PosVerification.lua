@@ -69,4 +69,9 @@ AtlantisSorento1 = function()
     end
 end
 
+entradaLeao = function()
+if (posx() >= 1518 and posx() <= 1523) and (posy() <= 715 and posy() >=710) then
+return true
+end
+
 --info('Loaded Positions')
