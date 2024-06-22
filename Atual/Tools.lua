@@ -604,7 +604,7 @@ info('pass')
     end
 end)
 
-macro(2000, 'F8', 'Sense Macro', function()
+macro(2000,'Sense Macro', 'F8', function()
     if targetsense ~= nil then
         say(storage.sense .. ' "' .. targetsense)
     end
