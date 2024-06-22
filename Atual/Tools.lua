@@ -592,3 +592,28 @@ if keys == 'Ctrl+]' then
 say('!deathlist ' .. player:getName())
 end
 end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+    if player:getName() ~= name then return end
+    if text:find('x') then
+info('pass')
+        startindex = text:find('x')
+        endindex = text:find('!')
+        targetsense = text:sub(startindex+1, endindex-1)
+info('pass')
+    end
+end)
+
+macro(2000, 'F8', 'Sense Macro', function()
+    if targetsense ~= nil then
+        say(storage.sense .. ' "' .. targetsense)
+    end
+end)
+
+onKeyDown(function(keys)
+    if keys == 'F9' then
+        if targetsense == nil then return end
+        say(storage.sense .. ' "' .. targetsense)
+info(targetsense)
+    end
+end)
