@@ -983,6 +983,17 @@ if player:getTitle() == ('Io [Scylla]') then
   info('Load: ' .. player:getTitle())
 end
 
+
+if player:getTitle() == ('Io [Scylla]') then
+  storage.combo1 = 'teriburu purobidensu'
+  storage.combo2 = 'divine punishment'
+  storage.combo3 = 'terrivel providencia'
+  storage.combo4 = 'ultimate morte'
+  storage.sspell = nil
+  storage.ultimate = 'medo do abismo'
+  info('Load: ' .. player:getTitle())
+end
+
 end)
 
 onKeyDown(function(keys)
