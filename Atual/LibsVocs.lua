@@ -9,6 +9,7 @@ schedule(1000, function()
  storage.combo4 = 'ultimate pegasus'
  storage.ultimate = 'ataque de pegasus'
  storage.sspell = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -19,6 +20,7 @@ if player:getTitle() == ('Hyoga [Cisne]') then
  storage.combo4 = 'ultimate cisne'
  storage.ultimate = 'circulo de gelo celestial'
  storage.sspell = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -29,6 +31,7 @@ if player:getTitle() == ('Shiryu [Dragao]') then
  storage.combo4 = 'ultimate dragon'
  storage.ultimate = 'life strengthening'
  storage.sspell = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -39,6 +42,7 @@ if player:getTitle() == ('Shun [Andromeda]') then
  storage.combo4 = 'ultimate andromeda'
  storage.ultimate = 'corrente circular'
  storage.sspell = nil
+ storage.sense = 'chain sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -49,6 +53,7 @@ if player:getTitle() == ('Ikki [Fenix]') then
  storage.combo4 = 'ultimate fenix'
  storage.ultimate = 'golpe fantasma de fenix'
  storage.sspell = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -59,6 +64,7 @@ if player:getTitle() == ('Mascara da Morte [Cancer]') then
  storage.combo4 = 'ultimate cancer'
  storage.ultimate = 'ondas do inferno'
  storage.sspell = 'yomotsu shield'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -69,6 +75,7 @@ if player:getTitle() == ('Mu [Aries]') then
  storage.combo4 = 'ultimate aries'
  storage.sspell = 'create repair hammer'
  storage.ultimate = 'muralha de cristal'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -79,6 +86,7 @@ if player:getTitle() == ('Camus [Aquario]' or player:getTitle() == 'Camus Renega
   storage.combo4 = 'ultimate aquario'
   storage.sspell = nil
   storage.ultimate = 'Esquife de Gelo Supremo'
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -89,6 +97,7 @@ if player:getTitle() == ('Daichi [Terra]') then
  storage.combo4 = 'ultimate terra'
  storage.sspell = nil
  storage.ultimate = 'stone wall'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -99,6 +108,7 @@ if player:getTitle() == ('Ushio [Mar]') then
  storage.combo4 = 'ultimate mar'
  storage.sspell = nil
  storage.ultimate = 'cosmo consumption'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -109,6 +119,7 @@ if player:getTitle() == ('Sho [Ceu]') then
  storage.combo4 = 'ultimate ceu'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -119,6 +130,7 @@ if player:getTitle() == ('Algol [Perseu]') then
  storage.combo4 = 'ultimate perseu'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -129,6 +141,7 @@ if player:getTitle() == ('Algol Renegado [Perseu]') then
  storage.combo4 = 'ultimate perseu'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -139,6 +152,7 @@ if player:getTitle() == ('Cavaleiro') then
  storage.combo4 = nil
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -149,6 +163,7 @@ if player:getTitle() == ('Ichi [Hidra]') then
  storage.combo4 = 'ultimate hidra'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -159,6 +174,7 @@ if player:getTitle() == ('Ban [Leao Menor]') then
  storage.combo4 = 'ultimate leao menor'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -169,6 +185,7 @@ if player:getTitle() == ('Jabu [Unicornio]') then
  storage.combo4 = 'ultimate unicornio'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -179,6 +196,7 @@ if player:getTitle() == ('Nachi [Lobo]') then
  storage.combo4 = 'ultimate lobo'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -189,6 +207,7 @@ if player:getTitle() == ('Geki [Urso]') then
  storage.combo4 = 'ultimate urso'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -199,6 +218,7 @@ if player:getTitle() == ('June [Camaleao]') then
  storage.combo4 = 'ultimate camaleao'
  storage.sspell = nil
  storage.ultimate = 'poder curativo "' .. player:getName()
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -209,6 +229,7 @@ if player:getTitle() == ('Guarda Graad') then
  storage.combo4 = 'ultimate graad'
  storage.sspell = nil
  storage.ultimate = 'last cartridge'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -219,6 +240,7 @@ if player:getTitle() == ('Moses [Baleia]') then
  storage.combo4 = 'ultimate baleia'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -229,6 +251,7 @@ if player:getTitle() == ('Cassius') then
  storage.combo4 = 'ultimate ear'
  storage.sspell = nil
  storage.ultimate = 'stay away'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -239,6 +262,7 @@ if player:getTitle() == ('Kenuma [Pegasus Negro]') then
  storage.combo4 = 'ultimate pegasus negro'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -249,6 +273,7 @@ if player:getTitle() == ('Ritahoa [Fenix Negro]') then
  storage.combo4 = 'ultimate fenix negro'
  storage.sspell = nil
  storage.ultimate = 'assalto negro'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -259,6 +284,7 @@ if player:getTitle() == ('Umnamed [Andromeda Negro]') then
  storage.combo4 = 'ultimate andromeda negro'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -269,6 +295,7 @@ if player:getTitle() == ('Jido [Cisne Negro]') then
  storage.combo4 = 'ultimate cisne negro'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
  info('Load: ' .. player:getTitle())
 end
 
@@ -279,6 +306,7 @@ if player:getTitle() == ('Minos [Griffon]') then
  storage.combo4 = 'ultimate griffon'
  storage.sspell = nil
  storage.ultimate = 'marionete cosmica'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -289,6 +317,7 @@ if player:getTitle() == ('Cavaleiro [Cristal]') then
  storage.combo4 = 'ultimate cristal'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
  info('Load: ' .. player:getTitle())
 end
 
@@ -299,6 +328,7 @@ if player:getTitle() == ('Ennetsu [Fogo]') then
  storage.combo4 = 'ultimate fogo'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
  info('Load: ' .. player:getTitle())
 end
 
@@ -309,6 +339,7 @@ if player:getTitle() == ('Serpente Marinha [Fantasma]') then
  storage.combo4 = 'ultimate serpente marinha'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -319,6 +350,7 @@ if player:getTitle() == ('Docrates [Hydrus]') then
  storage.combo4 = 'ultimate hydrus'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -329,6 +361,7 @@ if player:getTitle() == ('Shura Renegado [Capricornio]' or 'Shura [Capricornio]'
  storage.combo4 = 'ultimate capricornio'
  storage.sspell = nil
  storage.ultimate = 'excalibur sword'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -339,6 +372,7 @@ if player:getTitle() == ('Dante [Cerberus]') or player:getTitle() == ('Dante Ren
  storage.combo4 = 'ultimate cerberus'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -349,6 +383,7 @@ if player:getTitle() == ('Asterion [Caes de Caca]') then
  storage.combo4 = 'ultimate caes'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -359,6 +394,7 @@ if player:getTitle() == ('Jamian [Corvo]') then
  storage.combo4 = 'ultimate corvo'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -369,6 +405,7 @@ if player:getTitle() == ('Dio [Mosca]') then
  storage.combo4 = 'ultimate mosca'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -379,6 +416,7 @@ if player:getTitle() == ('Aiolia [Leao]') then
  storage.combo4 = 'ultimate leao'
  storage.sspell = nil
  storage.ultimate = 'golpe violento do leao'
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -389,6 +427,7 @@ if player:getTitle() == ('Aldebaran [Touro]') then
  storage.combo4 = 'ultimate touro'
  storage.sspell = nil
  storage.ultimate = 'grande chifre de ouro'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -399,6 +438,7 @@ if player:getTitle() == ('Dohko [Libra]') then
  storage.combo4 = 'ultimate libra'
  storage.sspell = nil
  storage.ultimate = 'rejuvenescimento'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -409,6 +449,7 @@ if player:getTitle() == ('Aiolos [Sagitario]') then
  storage.combo4 = 'ultimate sagitario'
  storage.sspell = nil
  storage.ultimate = 'flecha de ouro'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -419,6 +460,7 @@ if player:getTitle() == ('Milo [Escorpiao]') then
  storage.combo4 = 'ultimate escorpiao'
  storage.sspell = nil
  storage.ultimate = 'ferroada mortal'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -429,6 +471,7 @@ if player:getTitle() == ('Moses Renegado [Baleia]') then
  storage.combo4 = 'ultimate baleia'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -439,6 +482,7 @@ if player:getTitle() == ('Babel [Centauro]') then
  storage.combo4 = 'ultimate centauro'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -449,6 +493,7 @@ if player:getTitle() == ('Babel Renegado [Centauro]') then
  storage.combo4 = 'ultimate centauro'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -459,6 +504,7 @@ if player:getTitle() == ('Shaka [Virgem]') then
  storage.combo4 = 'ultimate virgem'
  storage.sspell = nil
  storage.ultimate = 'tesouro do ceu'
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -469,6 +515,7 @@ if player:getTitle() == ('Capella [Auriga]') then
  storage.combo4 = 'ultimate auriga'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -479,6 +526,7 @@ if player:getTitle() == ('Capella Renegado [Auriga]') then
  storage.combo4 = 'ultimate auriga'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -490,6 +538,7 @@ if player:getTitle() == ('Shiva [Pavao]') then
  storage.combo4 = 'ultimate pavao'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -500,6 +549,7 @@ if player:getTitle() == ('Farao [Esfinge]') then
  storage.combo4 = 'ultimate esfinge'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -510,6 +560,7 @@ if player:getTitle() == ('Dio Renegado [Mosca]') then
  storage.combo4 = 'ultimate mosca'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -520,6 +571,7 @@ if player:getTitle() == ('Misty [Lagarto]') then
  storage.combo4 = 'ultimate lagarto'
  storage.sspell = nil
  storage.ultimate = 'paredao de ar'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -530,6 +582,7 @@ if player:getTitle() == ('Misty Renegado [Lagarto]') then
  storage.combo4 = 'ultimate lagarto'
  storage.sspell = nil
  storage.ultimate = 'paredao de ar'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -540,6 +593,7 @@ if player:getTitle() == ('Afrodite Renegado [Peixes]') then
  storage.combo4 = 'ultimate peixes'
  storage.ultimate = 'Rosas Diabolicas Reais'
  storage.sspell = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -550,6 +604,7 @@ if player:getTitle() == ('Afrodite [Peixes]') then
  storage.combo4 = 'ultimate peixes'
  storage.ultimate = 'Rosas Diabolicas Reais'
  storage.sspell = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -560,6 +615,7 @@ if player:getTitle() == ('Thetis [Sereia]') then
  storage.combo4 = 'ultimate sereia'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -570,6 +626,7 @@ if player:getTitle() == ('Algeth [Hercules]') then
  storage.combo4 = 'ultimate hercules'
  storage.sspell = nil
  storage.ultimate = 'protecao de hercules'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -580,6 +637,7 @@ if player:getTitle() == ('Algeth Renegado [Hercules]') then
  storage.combo4 = 'ultimate hercules'
  storage.sspell = nil
  storage.ultimate = 'protecao de hercules'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -590,6 +648,7 @@ if player:getTitle() == ('Marin [Aguia]') then
  storage.combo4 = 'ultimate aguia'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -600,6 +659,7 @@ if player:getTitle() == ('Shina [Ofiuco]') then
  storage.combo4 = 'ultimate ofiuco'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -610,6 +670,7 @@ if player:getTitle() == ('Fenrir [Alioth]') then
  storage.combo4 = 'ultimate alioth'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -620,6 +681,7 @@ if player:getTitle() == ('Alberich [Megrez]') then
  storage.combo4 = 'ultimate megrez'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -630,6 +692,7 @@ if player:getTitle() == ('Bado [Alcor]') then
  storage.combo4 = 'ultimate alcor'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -640,6 +703,7 @@ if player:getTitle() == ('Shido [Mizar]') then
  storage.combo4 = 'ultimate mizar'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -650,6 +714,7 @@ if player:getTitle() == ('Saga [Maligno]') then
  storage.combo4 = 'ultimate maligno'
  storage.sspell = nil
  storage.ultimate = 'dimensao galactica'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -660,6 +725,7 @@ if player:getTitle() == ('Mime [Benetnasch]') then
  storage.combo4 = 'ultimate benetnasch'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -670,6 +736,7 @@ if player:getTitle() == ('Siegfried [Dubhe]') then
  storage.combo4 = 'ultimate dubhe'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -680,6 +747,7 @@ if player:getTitle() == ('Hyoga [Cisne Divino]') then
  storage.combo4 = 'ultimate cisne divino'
  storage.sspell = nil
  storage.ultimate = 'Execucao Aurora Divina'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -690,6 +758,7 @@ if player:getTitle() == ('Seiya [Odin]') then
  storage.combo4 = 'ultimate odin'
  storage.sspell = nil
  storage.ultimate = 'balmung reaper'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -700,6 +769,7 @@ if player:getTitle() == ('Hyoga [Aquario]') then
  storage.combo4 = 'ultimate aquario'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -709,7 +779,8 @@ if player:getTitle() == ('Isaak [Kraken]') then
  storage.combo3 = 'diamond dust'
  storage.combo4 = 'ultimate kraken'
  storage.sspell = nil
- storage.ultimate = 'balmung reaper'
+ storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -720,6 +791,7 @@ if player:getTitle() == ('Ikki [Fenix Divino]') then
  storage.combo4 = 'ultimate fenix divina'
  storage.sspell = nil
  storage.ultimate = 'lenda fenix'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -730,6 +802,7 @@ if player:getTitle() == ('Shiryu [Dragao Divino]') then
  storage.combo4 = 'ultimate dragao divino'
  storage.sspell = nil
  storage.ultimate = 'colera dos cem dragoes de rozan'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -740,6 +813,7 @@ if player:getTitle() == ('Sorento [Sirene]') then
  storage.combo4 = 'ultimate sirene'
  storage.sspell = nil
  storage.ultimate = 'canto da sirene'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -750,6 +824,7 @@ if player:getTitle() == ('Saori [Athena]') then
  storage.combo4 = nil
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -760,6 +835,7 @@ if player:getTitle() == ('Seiya [Sagitario]') then
  storage.combo4 = 'ultimate sagitario'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -770,6 +846,7 @@ if player:getTitle() == ('Hyoga [Cisne Celeste]') then
  storage.combo4 = 'ultimate cisne celeste'
  storage.sspell = nil
  storage.ultimate = 'execucao celeste'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -780,6 +857,7 @@ if player:getTitle() == ('Rock [Golem]') then
  storage.combo4 = 'ultimate golem'
  storage.sspell = nil
  storage.ultimate = 'avalanche devastadora'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -790,6 +868,7 @@ if player:getTitle() == ('Kagaho [Benu]') then
  storage.combo4 = 'ultimate benu'
  storage.sspell = nil
  storage.ultimate = 'explosao da coroa solar'
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -800,6 +879,7 @@ if player:getTitle() == ('Krishna [Chrysaor]') then
  storage.combo4 = 'ultimate chrysaor'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -810,6 +890,7 @@ if player:getTitle() == ('Bian [Cavalo Marinho]') then
  storage.combo4 = 'ultimate cavalo marinho'
  storage.sspell = nil
  storage.ultimate = nil
+ storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -820,6 +901,7 @@ if player:getTitle() == ('Radamanthys [Wyvern]') then
   storage.combo4 = 'ultimate wyvern'
   storage.sspell = nil
   storage.ultimate = 'flying wyvern'
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -830,6 +912,7 @@ if player:getTitle() == ('Shun [Andromeda Divino]') then
   storage.combo4 = 'ultimate andromeda divino'
   storage.sspell = nil
   storage.ultimate = nil
+  storage.sense = 'chain sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -840,6 +923,7 @@ if player:getTitle() == ('Seiya [Pegasus Celeste]') then
   storage.combo4 = 'ultimate pegasus celeste'
   storage.sspell = nil
   storage.ultimate = nil
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -850,6 +934,7 @@ if player:getTitle() == ('Zelos [Sapo]') then
   storage.combo4 = 'ultimate sapo'
   storage.sspell = nil
   storage.ultimate = 'jumping smash'
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -860,6 +945,7 @@ if player:getTitle() == ('Unnamed [Andromeda Negro]') then
   storage.combo4 = 'ultimate andromeda negro'
   storage.sspell = nil
   storage.ultimate = 'nebulosa negra'
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -870,6 +956,7 @@ if player:getTitle() == ('Poseidon [Deus]') then
   storage.combo4 = 'ultimate poseidon'
   storage.sspell = nil
   storage.ultimate = 'tsunami devastador'
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -880,6 +967,7 @@ if player:getTitle() == ('Kanon [Dragao Marinho]') then
   storage.combo4 = 'ultimate dragao marinho'
   storage.sspell = nil
   storage.ultimate = 'triangulo marinho'
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -890,6 +978,7 @@ if player:getTitle() == ('Unity [Dragao Marinho]') then
   storage.combo4 = 'ultimate poseidon'
   storage.sspell = nil
   storage.ultimate = 'tsunami devastador'
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -900,6 +989,7 @@ if player:getTitle() == ('Mascara da Morte Renegado [Cancer]') then
   storage.combo4 = 'ultimate cancer'
   storage.sspell = 'yomotsu shield'
   storage.ultimate = 'ondas do inferno'
+    storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -910,6 +1000,7 @@ if player:getTitle() == ('Ikki [Leao]') then
   storage.combo4 = 'ultimate leao'
   storage.sspell = nil
   storage.ultimate = nil
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -920,6 +1011,7 @@ if player:getTitle() == ('Golfinho [Fantasma]') then
   storage.combo4 = 'ultimate golfinho'
   storage.sspell = nil
   storage.ultimate = nil
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -930,6 +1022,7 @@ if player:getTitle() == ('Shion [Aries]') then
   storage.combo4 = 'ultimate shion'
   storage.sspell = nil
   storage.ultimate = 'revolucao divina'
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -940,6 +1033,7 @@ if player:getTitle() == ('Shion Renegado [Aries]') then
   storage.combo4 = 'ultimate aries renegado'
   storage.sspell = nil
   storage.ultimate = 'sobrepelis estelar'
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -950,6 +1044,7 @@ if player:getTitle() == ('Ikki [Fenix Celeste]') then
   storage.combo4 = 'ultimate fenix celeste'
   storage.sspell = nil
   storage.ultimate = nil
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -960,6 +1055,7 @@ if player:getTitle() == ('Shiryu [Dragao Celeste]') then
   storage.combo4 = 'ultimate dragon celeste'
   storage.sspell = nil
   storage.ultimate = nil
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -970,6 +1066,7 @@ if player:getTitle() == ('Unity [Dragao Marinho]') then
   storage.combo4 = 'ultimate unity'
   storage.sspell = nil
   storage.ultimate = nil
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -980,6 +1077,7 @@ if player:getTitle() == ('Io [Scylla]') then
   storage.combo4 = 'ultimate scylla'
   storage.sspell = nil
   storage.ultimate = nil
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
@@ -991,6 +1089,7 @@ if player:getTitle() == ('Thanatos [Deus Da Morte]') then
   storage.combo4 = 'ultimate morte'
   storage.sspell = nil
   storage.ultimate = 'medo do abismo'
+  storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
 
