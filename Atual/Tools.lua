@@ -595,12 +595,10 @@ end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
     if player:getName() ~= name then return end
-    if text:find('x') then
-info('pass')
         startindex = text:find('x')
         endindex = text:find('!')
+    if startindex and endindex then
         targetsense = text:sub(startindex+1, endindex-1)
-info('pass')
     end
 end)
 
