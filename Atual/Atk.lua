@@ -51,7 +51,7 @@ macro(200, "Face Target", function()
     elseif not xDiff and isXBigger then 
         if dir ~= 3 then turn(3) end
         return
-    elseif yDiff and not isXBigger then  
+    elseif yDiff and not isXBigger then
         if dir ~= 2 then turn(2) end
         return
     elseif not yDiff and not isXBigger  then 
@@ -171,6 +171,17 @@ g_game.attack(spec)
   end
 end)
 
+
+onAttackingCreatureChange(function(creature, oldCreature)
+  if creature and creature:isPlayer() then
+    TargetBot.setOff()
+    CaveBot.setOff()
+end
+if oldCreature and oldCreature:isPlayer() then
+TargetBot.setOn()
+CaveBot.setOn()
+  end
+end)
 -------------------------------------------------------------------------------------
 
 
