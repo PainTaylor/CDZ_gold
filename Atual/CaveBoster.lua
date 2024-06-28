@@ -77,10 +77,15 @@ end)
 if storage.totemxp == nil then
 storage.totemxp = now
 end
-macro(200, 'Totem Bost', function()
-if storage.totemxp < now then
-useWith(14198, player)
-end
+macro(200, 'Totem Red', function()
+	if storage.totemxp < now then
+		useWith(14198, player)
+	end
+end)
+macro(200, 'Totem Gold', function()
+	if storage.totemxp < now then
+		useWith(14703, player)
+	end
 end)
 
 onTextMessage(function(mode, text)
