@@ -171,8 +171,9 @@ g_game.attack(spec)
   end
 end)
 
-
+autoatackcave = macro(200000, 'AutoHunt',function()end)
 onAttackingCreatureChange(function(creature, oldCreature)
+  if autoatackcave.isOff() then return end
   if creature and creature:isPlayer() then
     TargetBot.setOff()
     CaveBot.setOff()
