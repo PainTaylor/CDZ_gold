@@ -34,14 +34,28 @@ MainWindow
       width: 165
 
     Button
-      !text: tr('Bugavila')
+      !text: tr('South Forest')
       anchors.top: prev.bottom
       anchors.left: parent.left
       margin-top: 5
       width: 165
       
     Button
+      !text: tr('Bugavila')
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      margin-top: 5
+      width: 165
+
+    Button
       !text: tr('Medusa')
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      margin-top: 5
+      width: 165
+
+    Button
+      !text: tr('Queen Death Island')
       anchors.top: prev.bottom
       anchors.left: parent.left
       margin-top: 5
