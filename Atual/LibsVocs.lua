@@ -1099,9 +1099,16 @@ end)
 
 configmode = false
 onKeyDown(function(keys)
-  if keys == 'Ctrl+5' then
+  if keys == 'Ctrl+4' then
     if configmode = false then
       configmode = true
+      info('Config: True')
+    end
+  end
+  if keys == 'Ctrl+5' then
+    if configmode then
+      configmode = false
+      info('Config: False')
     end
   end
   if configmode then
