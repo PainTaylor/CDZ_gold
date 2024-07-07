@@ -12,18 +12,23 @@ onKeyDown(function(keys)
   end
 end)
 
-storage.durability = nil
+storage.timercheckarmor = now
 
-onTextMessage(function(mode, text)
-local _, startIndex = text:find('Durability: ');
-local endIndex, _ = text:find('It');
-if text:find('Durability') and endIndex then
-  durabilityPercentage = text:sub(startIndex, endIndex-4);
-  storage.durability = tonumber(durabilityPercentage)
-end
-if text:find('Broken') then
-storage.durability = 0
-end
+macro(200, function()
+  if storage.timercheckarmor < now then
+    itemtocheck = getInventoryItem(SlotBody)
+    itemdisc = itemtocheck:getTooltip()
+    if itemdisc then
+      startIndex = itemdisc:find('Durability: ')
+      endIndex = itemdisc:find('It')
+      if startIndex and endIndex then
+        durabilityPercentage = itemdisc:sub(startIndex+11, endIndex-5)
+        storage.durability = tonumber(durabilityPercentage)
+        info(storage.durability)
+      end
+      storage.timercheckarmor = now + 6000
+    end
+  end
 end)
 
 UI.TextEdit(storage.mindurability or "80", function(widget, newText)
