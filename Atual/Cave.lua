@@ -24,7 +24,6 @@ macro(200, function()
       if startIndex and endIndex then
         durabilityPercentage = itemdisc:sub(startIndex+11, endIndex-5)
         storage.durability = tonumber(durabilityPercentage)
-        info(storage.durability)
       end
       storage.timercheckarmor = now + 6000
     end
