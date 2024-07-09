@@ -1093,9 +1093,42 @@ if player:getTitle() == ('Thanatos [Deus Da Morte]') then
   info('Load: ' .. player:getTitle())
 end
 
+
+if player:getTitle() == ('Hypnos [Deus Do Sono]') then
+  storage.combo1 = 'etanaru doraujinesu'
+  storage.combo2 = 'execucao de pesadelo'
+  storage.combo3 = 'pesadelo eterno'
+  storage.combo4 = 'ultimate sono'
+  storage.sspell = nil
+  storage.ultimate = 'sono eterno'
+  storage.sense = 'sense'
+  info('Load: ' .. player:getTitle())
+end
+
+
 end)
 
 
 
 
 
+configmode = false
+onKeyDown(function(keys)
+  if keys == 'Ctrl+4' then
+    if configmode == false then
+      configmode = true
+      info('Config: True')
+    end
+  end
+  if keys == 'Ctrl+5' then
+    if configmode then
+      configmode = false
+      info('Config: False')
+    end
+  end
+  if configmode then
+    if keys == 'Ctrl+0' then
+    say(player:getTitle())
+    end
+  end
+end)
