@@ -153,7 +153,7 @@ MainWindow
   scrollable: true
     
   ScrollablePanel
-    id: ATpList
+    id: TpList
     anchors.top: parent.top
     anchors.left: parent.left
     size: 190 225
@@ -214,28 +214,28 @@ MainWindow
 ]], g_ui.getRootWidget());
 ArconteUI:hide();
 
-TpMinoru = {};
+TPArconte = {};
 local MainPanel = ArconteUI.main;
 local TpList = ArconteUI.TpList;
 
-TpMinoru.close = function()
+TPArconte.close = function()
   ArconteUI:hide()
   schedule(1000, function()
       NPC.say('bye');
 end)
 end
 
-TpMinoru.show = function()
+TPArconte.show = function()
     ArconteUI:show();
     ArconteUI:raise();
     ArconteUI:focus();
 end
 
 ArconteUI.closeButton.onClick = function()
-    TpMinoru.close();
+    TPArconte.close();
 end
 
-TpMinoru.tpToCity = function(city)
+TPArconte.tpToCity = function(city)
     NPC.say(city);
     schedule(500, function()
         NPC.say('yes');
@@ -245,22 +245,22 @@ end
 
 for i, child in pairs(TpList:getChildren()) do
     child.onClick = function()
-        TpMinoru.tpToCity(child:getText())
+        TPArconte.tpToCity(child:getText())
     end
 end
 
 onTalk(function(name, level, mode, text, channelId, pos)
-  if (name ~= 'Athena Travel') then return; end              
+  if (name ~= 'Caronte Travel') then return; end              
   if (mode ~= 51) then return; end
   if (text:find('Para onde gostaria de ir?')) then 
-      TpMinoru.show();
+      TPArconte.show();
   else
-      TpMinoru.close();
+      TPArconte.close();
   end
 end);
 
 onKeyDown(function(keys)
     if (keys == 'Escape' and ArconteUI:isVisible())  then
-        TpMinoru.close();
+        TPArconte.close();
     end
 end);
