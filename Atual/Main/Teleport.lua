@@ -213,28 +213,28 @@ MainWindow
 ]], g_ui.getRootWidget());
 ArconteUI:hide();
 
-TpMinoru = {};
+TpArconte = {};
 local ArcontePainel = ArconteUI.main;
 local ArconteTPlist = ArconteUI.TpList;
 
-TpMinoru.close = function()
+TpArconte.close = function()
   ArconteUI:hide()
   schedule(1000, function()
       NPC.say('bye');
 end)
 end
 
-TpMinoru.show = function()
+TpArconte.show = function()
     ArconteUI:show();
     ArconteUI:raise();
     ArconteUI:focus();
 end
 
 ArconteUI.closeButton.onClick = function()
-    TpMinoru.close();
+    TpArconte.close();
 end
 
-TpMinoru.tpToCity = function(city)
+TpArconte.tpToCity = function(city)
     NPC.say(city);
     schedule(500, function()
         NPC.say('yes');
@@ -244,7 +244,7 @@ end
 
 for i, child in pairs(TpList:getChildren()) do
     child.onClick = function()
-        TpMinoru.tpToCity(child:getText())
+        TpArconte.tpToCity(child:getText())
     end
 end
 
@@ -252,14 +252,14 @@ onTalk(function(name, level, mode, text, channelId, pos)
   if (name ~= 'Caronte Travel') then return; end              
   if (mode ~= 51) then return; end
   if (text:find('Para onde gostaria de ir?')) then 
-      TpMinoru.show();
+      TpArconte.show();
   else
-      TpMinoru.close();
+      TpArconte.close();
   end
 end);
 
 onKeyDown(function(keys)
     if (keys == 'Escape' and ArconteUI:isVisible())  then
-        TpMinoru.close();
+        TpArconte.close();
     end
 end);
