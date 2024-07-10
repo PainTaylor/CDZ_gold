@@ -152,7 +152,7 @@ MainWindow
   scrollable: true
     
   ScrollablePanel
-    id: TpList
+    id: ATpList
     anchors.top: parent.top
     anchors.left: parent.left
     size: 190 225
@@ -215,7 +215,7 @@ ArconteUI:hide();
 
 TpArconte = {};
 local ArcontePainel = ArconteUI.main;
-local ArconteTPlist = ArconteUI.TpList;
+local ArconteTPlist = ArconteUI.ATpList;
 
 TpArconte.close = function()
   ArconteUI:hide()
@@ -242,7 +242,7 @@ TpArconte.tpToCity = function(city)
 end
 
 
-for i, child in pairs(TpList:getChildren()) do
+for i, child in pairs(ATpList:getChildren()) do
     child.onClick = function()
         TpArconte.tpToCity(child:getText())
     end
