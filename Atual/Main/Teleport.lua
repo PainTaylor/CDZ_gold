@@ -249,7 +249,7 @@ for i, child in pairs(TpList:getChildren()) do
 end
 
 onTalk(function(name, level, mode, text, channelId, pos)
-  if (name ~= 'Athena Travel') then return; end              
+  if (name ~= 'Caronte Travel') then return; end              
   if (mode ~= 51) then return; end
   if (text:find('Para onde gostaria de ir?')) then 
       TpMinoru.show();
