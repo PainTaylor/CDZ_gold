@@ -56,9 +56,9 @@ modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/
 
 
 --LoadCave
-modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/Cave.lua', function(script)
-    assert(loadstring(script))()
-  end);
+--modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/Cave.lua', function(script)
+--    assert(loadstring(script))()
+--  end);
 
 
 --LoadTarget
@@ -69,6 +69,10 @@ modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/
 
 --Load Tools
 modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/Tools.lua', function(script)
+    assert(loadstring(script))()
+  end);
+
+modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/PeriiCave.lua', function(script)
     assert(loadstring(script))()
   end);
 
