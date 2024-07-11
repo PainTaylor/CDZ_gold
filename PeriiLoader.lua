@@ -59,7 +59,9 @@ modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/
 --modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/Cave.lua', function(script)
 --    assert(loadstring(script))()
 --  end);
-
+modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/PeriiCave.lua', function(script)
+    assert(loadstring(script))()
+  end);
 
 --LoadTarget
 modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/Target.lua', function(script)
@@ -72,9 +74,7 @@ modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/
     assert(loadstring(script))()
   end);
 
-modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/PeriiCave.lua', function(script)
-    assert(loadstring(script))()
-  end);
+
 
 
 --Load Discord
