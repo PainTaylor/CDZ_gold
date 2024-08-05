@@ -3,10 +3,11 @@ setDefaultTab("Main")
 schedule(1000, function()
 
   if player:getTitle() == ('Seiya [Pegasus]') then
+ storage.elemento = 'Wind'
  storage.combo1 = 'Meteoro De Pegasus'
  storage.combo2 = 'Cometa De Pegasus'
  storage.combo3 = 'Turbilhao de Pegasus'
- storage.combo4 = 'ultimate pegasus'
+ storage.combo4 = 'ultimate ' .. storage.elemento
  storage.ultimate = 'ataque de pegasus'
  storage.sspell = nil
  storage.sense = 'sense'
@@ -14,6 +15,7 @@ schedule(1000, function()
 end
 
 if player:getTitle() == ('Hyoga [Cisne]') then
+  storage.elemento = 'Wind'
  storage.combo1 = 'Po de Diamante'
  storage.combo2 = 'Trovao Aurora Ataque'
  storage.combo3 = 'Execucao Aurora'
@@ -25,6 +27,7 @@ if player:getTitle() == ('Hyoga [Cisne]') then
 end
 
 if player:getTitle() == ('Shiryu [Dragao]') then
+ storage.elemento = 'Water'
  storage.combo1 = 'Colera do Dragao'
  storage.combo2 = 'Dragao Voador'
  storage.combo3 = 'Last Dragon'
@@ -36,6 +39,7 @@ if player:getTitle() == ('Shiryu [Dragao]') then
 end
 
 if player:getTitle() == ('Shun [Andromeda]') then
+  storage.elemento = 'Earth'
  storage.combo1 = 'Nebulosa de Andromeda'
  storage.combo2 = 'Onda Relampago'
  storage.combo3 = 'Correnteza Nebulosa'
@@ -47,6 +51,7 @@ if player:getTitle() == ('Shun [Andromeda]') then
 end
 
 if player:getTitle() == ('Ikki [Fenix]') then
+ storage.elemento = 'Fire'
  storage.combo1 = 'Ave Fenix'
  storage.combo2 = 'Golpe de Fenix'
  storage.combo3 = 'Hoyoku Tensho'
@@ -58,6 +63,7 @@ if player:getTitle() == ('Ikki [Fenix]') then
 end
 
 if player:getTitle() == ('Mascara da Morte [Cancer]') then
+ storage.elemento = 'Water'
  storage.combo1 = 'akubensu'
  storage.combo2 = 'sekishiki meikai'
  storage.combo3 = 'sekishiki kisoen'
@@ -80,10 +86,11 @@ if player:getTitle() == ('Mu [Aries]') then
 end
 
 if player:getTitle() == ('Camus [Aquario]' or player:getTitle() == 'Camus Renegado [Aquario]') then
+  storage.elemento = 'Wind'
   storage.combo1 = 'Esquife de Gelo'
   storage.combo2 = 'circulo de gelo'
   storage.combo3 = 'Daiyamondo Dasuto'
-  storage.combo4 = 'ultimate aquario'
+  storage.combo4 = 'ultimate ' .. storage.elemento
   storage.sspell = nil
   storage.ultimate = 'Esquife de Gelo Supremo'
   storage.sense = 'sense'
@@ -102,6 +109,7 @@ if player:getTitle() == ('Daichi [Terra]') then
 end
 
 if player:getTitle() == ('Ushio [Mar]') then
+ storage.elemento = 'Water'
  storage.combo1 = 'suchiiru hariken'
  storage.combo2 = 'steek hurricane'
  storage.combo3 = 'furacao de aco'
