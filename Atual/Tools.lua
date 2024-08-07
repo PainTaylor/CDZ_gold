@@ -35,6 +35,23 @@ macro(200, 'ArtefactAdapt', function()
   end
 end)
 
+macro(200, 'UpdropRaridade', function()
+  if storage.holditem > now then
+    moveToSlot(13815, 2)
+  elseif g_game.isAttacking() then
+      x = g_game.getAttackingCreature()
+     if x:getHealthPercent() <= 10 and x:isMonster() then
+      moveToSlot(13804, 2)
+      delay(1000)
+  else
+    moveToSlot(13779, 2)
+  end
+  else
+    moveToSlot(13788, 2)
+  end
+end)
+
+
 onContainerOpen(function(container, previousContainer)
   if not container:getName():find('grey bag') then return end
   if container:getName():find('grey bag') then
