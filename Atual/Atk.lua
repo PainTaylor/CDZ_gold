@@ -1,15 +1,7 @@
 setDefaultTab("Atk")
 
-macro(1000, 'Special Cast', function()
-  if not g_game.isAttacking() then return end
-  if soul() == 200 then
-    say(storage.ultimate)
-  end
-end)
-
-macro(100, 'Combo', function()
- if not g_game.isAttacking() then return end
-  if player:getLevel() >= 250 then
+comboLevel = function()
+    if player:getLevel() >= 250 then
    say(storage.combo4)
 end
  if player:getLevel() >= 150 then
@@ -21,7 +13,43 @@ end
  if player:getLevel() >= 1 then
   say(storage.combo1)
 end
+end
+
+combo = function()
+   say(storage.combo4)
+   say(storage.combo3)
+   say(storage.combo2)
+  say(storage.combo1)
+end
+
+
+macro(1000, 'Special Cast', function()
+  if not g_game.isAttacking() then return end
+  if soul() == 200 then
+    say(storage.ultimate)
+  end
 end)
+
+macro(100, 'Combo', function()
+ if not g_game.isAttacking() then return end
+ comboLevel()
+end)
+
+macro(100, 'ComboS/Level', function()
+ if not g_game.isAttacking() then return end
+combo()
+end)
+
+macro(100, 'Combo C/Execute', function()
+ if not g_game.isAttacking() then return end
+ Lockin = g_game.getAttackingCreature()
+ if Lockin:isPlayer() and Lockin:getHealthPercent() < 40 then
+  say(storage.ultimate)
+end
+combo()
+end)
+
+
 
 onKeyPress(function(keys)
     if storage.ultimate == nil or modules.game_console:isChatEnabled() then return end

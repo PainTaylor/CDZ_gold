@@ -12,6 +12,7 @@ end)
   Damageartefact = findItem(13779)
   LootArtefact = findItem(13694)
   PoisonArtefact = findItem(13727)
+  RarityArtefact = findItem(13804)
 
 macro(200, 'RemovePoison', function()
     if isPoisioned() then
