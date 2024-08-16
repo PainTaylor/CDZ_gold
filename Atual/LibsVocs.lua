@@ -383,9 +383,21 @@ if player:getTitle() == ('Docrates [Hydrus]') then
   info('Load: ' .. player:getTitle())
 end
 
-if player:getTitle() == ('Shura Renegado [Capricornio]' or 'Shura [Capricornio]') then
+if player:getTitle() == 'Shura [Capricornio]' then
  storage.elemento = 'Earth'
- storage.combo1 = 'Pedra Saltitante'
+ storage.combo1 = 'pedra saltitante'
+ storage.combo2 = 'Excalibur'
+ storage.combo3 = 'Shinken ekusukariba'
+ storage.combo4 = 'ultimate ' .. storage.elemento --contelação:  capricornio'
+ storage.sspell = nil
+ storage.ultimate = 'excalibur sword'
+ storage.sense = 'sense'
+  info('Load: ' .. player:getTitle())
+end
+
+if player:getTitle() == 'Shura Renegado [Capricornio]' then
+ storage.elemento = 'Earth'
+ storage.combo1 = 'pedra saltitante'
  storage.combo2 = 'Excalibur'
  storage.combo3 = 'Shinken ekusukariba'
  storage.combo4 = 'ultimate ' .. storage.elemento --contelação:  capricornio'
