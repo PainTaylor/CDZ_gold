@@ -389,17 +389,17 @@ onTextMessage(function(mode, text)
   end
     if p:isPlayer() and text:find(p:getName()) and text:find('attack by') and p:getSkull() ~= 0 then
           TargetBot.setOff()
-    CaveBot.setOff()
-    g_game.setChaseMode(1)
-    g_game.setSafeFight(false)
-      Alvo = p:getName()
+      CaveBot.setOff()
+      g_game.setChaseMode(1)
+      g_game.setSafeFight(false)
+      NameTarget = p:getName()
       g_game.attack(p)
     end
   end
 end)
 
 onCreatureDisappear(function(creature)
-  if creature:getName() == Alvo then
+  if creature:getName() == NameTarget then
     TargetBot.setOn()
     CaveBot.setOn()
     g_game.setChaseMode(0)
