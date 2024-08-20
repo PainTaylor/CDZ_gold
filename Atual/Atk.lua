@@ -23,7 +23,7 @@ combo = function()
 end
 
 
-macro(1000, 'Special Cast', function()
+specialcast = macro(1000, 'Special Cast', function()
   if not g_game.isAttacking() then return end
   if soul() == 200 then
     say(storage.ultimate)
@@ -384,7 +384,7 @@ Revidetext = macro(200000, 'Revide PK',function()end)
 onTextMessage(function(mode, text)
   if Revidetext.isOff() then return end
   for _, p in ipairs(getSpectators(posz())) do
-    if p:isPlayer() and text:find(p:getName()) and text:find('attack by') and p:getSKull() ~= 0 then
+    if p:isPlayer() and text:find(p:getName()) and text:find('attack by') and p:getSkull() ~= 0 then
       g_game.attack(p)
     end
   end
