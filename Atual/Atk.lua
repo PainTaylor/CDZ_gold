@@ -281,7 +281,7 @@ hotkey(Target.KeyCancel, function()
  Target.cancel()
 end)
  
-macro(100, 'Target', function()
+holdtarget = macro(100, 'Target', function()
  if Target.cancelTime >= now then return end
  if g_game.isAttacking() then
   Target.Id = g_game.getAttackingCreature():getId()
@@ -442,7 +442,11 @@ onTextMessage(function(mode, text)
     if p:getName() == g_game.getAttackingCreature():getName() then return end
   end
     if p:isPlayer() and text:find(p:getName()) and text:find('attack by') and p:getSkull() ~= 0 then
-          TargetBot.setOff()
+      TargetBot.setOff()
+      holdtarget.setOff()
+      Target.Id = nil
+      Target.get = nil
+      g_game.cancelAttack()
       CaveBot.setOff()
       g_game.setChaseMode(1)
       g_game.setSafeFight(false)
