@@ -385,6 +385,7 @@ onTextMessage(function(mode, text)
   if Revidetext.isOff() then return end
   for _, p in ipairs(getSpectators(posz())) do
     if p:isPlayer() and text:find(p:getName()) and text:find('attack by') and p:getSkull() ~= 0 then
+      if p:getName() == g_game.getAttackingCreature():getName() then return end
       g_game.attack(p)
     end
   end
