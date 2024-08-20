@@ -399,7 +399,7 @@ onTextMessage(function(mode, text)
 end)
 
 onCreatureDisappear(function(creature)
-  if creature:getName() == alvo then
+  if creature:getName() == Alvo then
     TargetBot.setOn()
     CaveBot.setOn()
     g_game.setChaseMode(0)
