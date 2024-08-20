@@ -383,10 +383,10 @@ end)
 Revidetext = macro(200000, 'Revide PK',function()end)
 onTextMessage(function(mode, text)
   if Revidetext.isOff() then return end
+    for _, p in ipairs(getSpectators(posz())) do
   if g_game.isAttacking() then
     if p:getName() == g_game.getAttackingCreature():getName() then return end
   end
-  for _, p in ipairs(getSpectators(posz())) do
     if p:isPlayer() and text:find(p:getName()) and text:find('attack by') and p:getSkull() ~= 0 then
       g_game.attack(p)
     end
