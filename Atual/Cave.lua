@@ -34,8 +34,12 @@ UI.TextEdit(storage.mindurability or "80", function(widget, newText)
 storage.mindurability = newText
 end)
 
-Backincave = macro(200, '100%',function()end)
-
+Backincave = macro(200, function()end)
+StopTemple = macro(200, 'SafeStop', function()
+    if IsInGreeceTemple() then
+        CaveBot.setOff()
+    end
+end)
 UI.Separator()
 --------------------------------------------------------
 safecavebot = macro(2000, 'SafeCavebot', function()end)

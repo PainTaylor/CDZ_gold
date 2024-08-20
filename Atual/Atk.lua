@@ -457,6 +457,7 @@ onTextMessage(function(mode, text)
 end)
 
 onCreatureDisappear(function(creature)
+  if autoatackcave.isOff() then return end
   if creature:getName() == NameTarget then
     TargetBot.setOn()
     CaveBot.setOn()
