@@ -364,21 +364,21 @@ g_game.attack(spec)
 end)
 
 autoatackcave = macro(200000, 'AutoHunt',function()end)
-onAttackingCreatureChange(function(creature, oldCreature)
-  if autoatackcave.isOff() then return end
-  if creature and creature:isPlayer() then
-    TargetBot.setOff()
-    CaveBot.setOff()
-    g_game.setChaseMode(1)
-    g_game.setSafeFight(false)
-  end
+--onAttackingCreatureChange(function(creature, oldCreature)
+--  if autoatackcave.isOff() then return end
+--  if creature and creature:isPlayer() then
+--    TargetBot.setOff()
+--    CaveBot.setOff()
+--    g_game.setChaseMode(1)
+--    g_game.setSafeFight(false)
+--  end
 --  if oldCreature and oldCreature:isPlayer() then
 --    TargetBot.setOn()
 --    CaveBot.setOn()
 --    g_game.setChaseMode(0)
 --    g_game.setSafeFight(true)
 --  end
-end)
+--end)
 
 Revidetext = macro(200000, 'Revide PK',function()end)
 onTextMessage(function(mode, text)
@@ -388,6 +388,10 @@ onTextMessage(function(mode, text)
     if p:getName() == g_game.getAttackingCreature():getName() then return end
   end
     if p:isPlayer() and text:find(p:getName()) and text:find('attack by') and p:getSkull() ~= 0 then
+          TargetBot.setOff()
+    CaveBot.setOff()
+    g_game.setChaseMode(1)
+    g_game.setSafeFight(false)
       Alvo = p:getName()
       g_game.attack(p)
     end
@@ -396,8 +400,10 @@ end)
 
 onCreatureDisappear(function(creature)
   if creature:getName() == alvo then
-    CaveBot.setOn()
     TargetBot.setOn()
+    CaveBot.setOn()
+    g_game.setChaseMode(0)
+    g_game.setSafeFight(true)
   end
 end)
 
