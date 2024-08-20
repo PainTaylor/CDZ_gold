@@ -49,8 +49,6 @@ end
 combo()
 end)
 
-
-
 onKeyPress(function(keys)
     if storage.ultimate == nil or modules.game_console:isChatEnabled() then return end
     if keys == 'R' then
@@ -87,6 +85,172 @@ macro(200, "Face Target", function()
         return
     end
 end)
+
+--------------------------Contador de Frags-------------------------------------------------<<
+UI.Separator()
+
+
+say('!frags')
+TFragdiario = 0
+TFragsemanal = 0
+TFragMensal = 0
+Fragdiario = 0
+FragSemanal = 0
+FragMensal = 0
+FragDiarioServer = 0
+FragSemanalServer = 0
+FragMensalServer = 0
+Fragdlimit = 0
+FragSlimit = 0
+FragMlimit = 0
+Fragdiario = 0
+FragSemanal = 0
+FragMensal = 0
+
+closeLoginAdvice = function()
+    for _, widget in pairs(g_ui.getRootWidget():getChildren()) do
+        if (widget:getText():find("For Your Information")) then
+            widget:destroy();
+            break
+        end
+    end
+end
+
+onLoginAdvice(function(mensage)
+  if mensage:find('Seus frags') then
+    --info('true1')
+    TFragdiario = mensage:sub(24, 27)
+        --info(TFragdiario)
+    TFragsemanal = mensage:sub(43, 45)
+            --say(TFragsemanal)
+    TFragMensal = mensage:sub(59, 64)
+            --say(TFragMensal)
+    Fragdiario = tonumber(TFragdiario:match('%d+'))
+            --info(Fragdiario)
+    FragSemanal = tonumber(TFragsemanal:match('%d+'))
+                --info(FragSemanal)
+    FragMensal = tonumber(TFragMensal:match('%d+'))
+                --info('fragMensal: ' .. FragMensal)
+  end
+  if mensage:find('Frags para Red Skull') then
+    FragDiarioServer = tonumber(mensage:sub(85, 105):match('%d+'))
+    --info('LFragDiario: ' .. FragDiarioServer)
+    FragSemanalServer = tonumber(mensage:sub(103, 108):match('%d+'))
+    --info('LFragSemanal: ' .. FragSemanalServer)
+    FragMensalServer = tonumber(mensage:sub(114, 120):match('%d+'))
+    --info('LFragMensal: ' .. FragMensalServer)
+    Fragdlimit = FragDiarioServer -1
+    FragSlimit = FragSemanalServer - 1
+    FragMlimit = FragMensalServer - 1
+      closeLoginAdvice()
+--info('LimiteD: ' .. Fragdlimit)
+--info('LimiteS: ' .. FragSlimit)
+--info('LimiteM: ' .. FragMlimit)
+  end
+end)
+
+onTextMessage(function(mode, text)
+  if text:find('The murder of') then
+    Fragdiario = Fragdiario + 1
+    FragSemanal = FragSemanal + 1
+    FragMensal = FragMensal + 1
+  end
+end)
+
+macro(100, 'Safe Red', function()
+  if FragSemanal == nil and FragSlimit == nil then return end
+  if (FragSemanal >= FragSlimit) or (Fragdiario >= Fragdlimit) or (FragMensal >= FragMlimit) then
+    g_game:setSafeFight(1)
+    atkname.setOff()
+  end
+end)
+
+xfrag = 200
+yfrag = 175
+
+local widget = setupUI([[
+Panel
+  height: 1200
+  width: 1200
+]], g_ui.getRootWidget())
+
+local timefragdiario = g_ui.loadUIFromString([[
+Label
+  color: white
+  background-color: black
+  opacity: 0.85
+  text-horizontal-auto-resize: true  
+]], widget)
+
+ 
+
+macro(1, function()
+if Fragdiario ~= nil then
+    timefragdiario:setText(Fragdiario)
+  timefragdiario:setColor('white')
+    if Fragdiario == Fragdlimit then
+      timefragdiario:setColor('yellow')
+    end
+    if Fragdiario > Fragdlimit then
+      timefragdiario:setColor('red')
+    end
+end
+end)
+
+timefragdiario:setPosition({y = yfrag, x =  xfrag})
+
+
+local timefragsemanal = g_ui.loadUIFromString([[
+Label
+  color: white
+  background-color: black
+  opacity: 0.85
+  text-horizontal-auto-resize: true  
+]], widget)
+
+macro(1, function()
+if FragSemanal ~= nil then
+    timefragsemanal:setText(FragSemanal)
+  timefragsemanal:setColor('white')
+    if FragSemanal >= FragSlimit then
+      timefragsemanal:setColor('yellow')
+    end
+    if FragSemanal > FragSlimit then
+      timefragsemanal:setColor('red')
+    end
+end
+end)
+
+timefragsemanal:setPosition({y = yfrag+15, x =  xfrag})
+
+local timefragmensal = g_ui.loadUIFromString([[
+Label
+  color: white
+  background-color: black
+  opacity: 0.85
+  text-horizontal-auto-resize: true  
+]], widget)
+
+macro(1, function()
+if FragMensal ~= nil then
+    timefragmensal:setText(FragMensal)
+  timefragmensal:setColor('white')
+    if FragMensal == FragMlimit then
+      timefragmensal:setColor('yellow')
+    end
+    if FragMensal > FragMlimit then
+      timefragmensal:setColor('red')
+    end
+end
+end)
+
+timefragmensal:setPosition({y = yfrag+30, x =  xfrag})
+
+UI.Separator()
+
+
+--------------------------------------------------------------------------------
+
 
 UI.Label("Enemys")
 
@@ -205,12 +369,27 @@ onAttackingCreatureChange(function(creature, oldCreature)
   if creature and creature:isPlayer() then
     TargetBot.setOff()
     CaveBot.setOff()
-end
-if oldCreature and oldCreature:isPlayer() then
-TargetBot.setOn()
-CaveBot.setOn()
+    g_game.setChaseMode(1)
+    g_game.setSafeFight(false)
+  end
+  if oldCreature and oldCreature:isPlayer() then
+    TargetBot.setOn()
+    CaveBot.setOn()
+    g_game.setChaseMode(0)
+    g_game.setSafeFight(true)
   end
 end)
+
+Revidetext = macro(200000, 'Revide PK',function()end)
+onTextMessage(function(mode, text)
+  if Revidetext.isOff() then return end
+  for _, p in ipairs(getSpectators(posz())) do
+    if p:isPlayer() and text:find(p:getName()) and text:find('attack by') and p:getSKull() ~= 0 then
+      g_game.attack(p)
+    end
+  end
+end)
+
 -------------------------------------------------------------------------------------
 
 
@@ -247,16 +426,6 @@ macro(1, 'Ant-Caveira', function()
     g_game.attack(possibleTarget)
 end
 end)
-
-
---onTextMessage(function(mode, text)
- --for _, p in ipairs(getSpectators(posz())) do
- -- if p:isPlayer() and text:find(p:getName()) and text:find('attack by') then
-    --CaveBot.setOff()
-    --TargetBot.setOff()
- -- end
---end
---end)
 
 
 local friendList = {'toei', 'ryan', 'darknuss', ''}
