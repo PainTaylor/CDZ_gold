@@ -384,14 +384,22 @@ Revidetext = macro(200000, 'Revide PK',function()end)
 onTextMessage(function(mode, text)
   if Revidetext.isOff() then return end
     for _, p in ipairs(getSpectators(posz())) do
-  if g_game.isAttacking() then
+  if g_game.isAttacking() and p:isPlayer() and t then
     if p:getName() == g_game.getAttackingCreature():getName() then return end
   end
     if p:isPlayer() and text:find(p:getName()) and text:find('attack by') and p:getSkull() ~= 0 then
+      Alvo = p:getName()
       g_game.attack(p)
     end
   end
 end)
+
+--onCreatureDisappear(function(creature)
+--  if creature:getName() == alvo then
+--    CaveBot.setOn()
+--    TargetBot.setOn()
+--  end
+--end)
 
 -------------------------------------------------------------------------------------
 
