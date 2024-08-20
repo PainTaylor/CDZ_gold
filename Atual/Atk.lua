@@ -372,12 +372,12 @@ onAttackingCreatureChange(function(creature, oldCreature)
     g_game.setChaseMode(1)
     g_game.setSafeFight(false)
   end
-  if oldCreature and oldCreature:isPlayer() then
-    TargetBot.setOn()
-    CaveBot.setOn()
-    g_game.setChaseMode(0)
-    g_game.setSafeFight(true)
-  end
+--  if oldCreature and oldCreature:isPlayer() then
+--    TargetBot.setOn()
+--    CaveBot.setOn()
+--    g_game.setChaseMode(0)
+--    g_game.setSafeFight(true)
+--  end
 end)
 
 Revidetext = macro(200000, 'Revide PK',function()end)
@@ -394,12 +394,12 @@ onTextMessage(function(mode, text)
   end
 end)
 
---onCreatureDisappear(function(creature)
---  if creature:getName() == alvo then
---    CaveBot.setOn()
---    TargetBot.setOn()
---  end
---end)
+onCreatureDisappear(function(creature)
+  if creature:getName() == alvo then
+    CaveBot.setOn()
+    TargetBot.setOn()
+  end
+end)
 
 -------------------------------------------------------------------------------------
 
