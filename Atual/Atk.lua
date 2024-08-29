@@ -36,8 +36,6 @@ end)
 local max_distance = 5
 -- END CONFIG
 
-UI.Separator()
-
 -- vBot scripting services: F.Almeida#8019
 -- if you like it, consider making a donation:
 -- https://www.paypal.com/donate/?business=8XSU4KTS2V9PN&no_recurring=0&item_name=OTC+AND+OTS+SCRIPTS&currency_code=USD
@@ -78,6 +76,8 @@ local autoWave = macro(100,"Special Reta", function()
    say(spell)
   end
 end)
+
+UI.Separator()
 
 macro(100, 'Combo', function()
  if not g_game.isAttacking() then return end
