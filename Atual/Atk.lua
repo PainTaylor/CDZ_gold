@@ -34,7 +34,6 @@ end)
 
 -- START CONFIG
 local max_distance = 5
-local exhausted = 30000 -- milliseconds
 -- END CONFIG
 
 UI.Separator()
@@ -65,10 +64,18 @@ local autoWave = macro(100,"Special Reta", function()
   if getDistanceBetween(pos,cpos) > maxDist then return true end
   local diffx = cpos.x - pos.x
   local diffy = cpos.y - pos.y
-  if diffx > 0 and diffy == 0 then turn(1) cast(spell) delay(exhausted)
-  elseif diffx < 0 and diffy == 0 then turn(3) cast(spell) delay(exhausted)
-  elseif diffx == 0 and diffy > 0 then turn(2) cast(spell) delay(exhausted)
-  elseif diffx == 0 and diffy < 0 then turn(0) cast(spell) delay(exhausted)
+  if diffx > 0 and diffy == 0 then
+   turn(1) 
+   say(spell)
+  elseif diffx < 0 and diffy == 0 then 
+   turn(3)
+   say(spell)
+  elseif diffx == 0 and diffy > 0 then
+   turn(2)
+   say(spell)
+  elseif diffx == 0 and diffy < 0 then
+   turn(0)
+   say(spell)
   end
 end)
 
