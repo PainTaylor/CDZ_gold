@@ -506,6 +506,19 @@ onTextMessage(function(mode, text)
   end
 end)
 
+
+onTextMessage(function(mode, text)
+  if text:find('') then
+    atkname.setOff()
+      if (FragSemanal < FragSlimit) or (Fragdiario < Fragdlimit) or (FragMensal < FragMlimit) then
+        schedule(900000, function()
+          atkname.setOn()
+        end)
+      end
+    end
+  end)
+
+
 onCreatureDisappear(function(creature)
   if autoatackcave.isOff() then return end
   if creature:getName() == NameTarget then
