@@ -53,9 +53,9 @@ macro(200, 'UpdropRaridade', function()
 end)
 
 macro(1, 'Troca de Armas', function()
-      if storage.holditem > now then
-        moveToSlot(13815, 2)
-      else
+    if storage.holditem > now then
+     moveToSlot(13815, 2)
+    else
     if not g_game.isAttacking() then return end
     local distance = getDistanceBetween(pos(), g_game.getAttackingCreature():getPosition());
     if distance <= 1 then
@@ -63,8 +63,8 @@ macro(1, 'Troca de Armas', function()
     elseif distance > 1 then
         moveToSlot(13779, 2);
     end
-end
-end));
+    end
+end)
 
 
 onContainerOpen(function(container, previousContainer)
