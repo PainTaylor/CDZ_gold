@@ -52,6 +52,20 @@ macro(200, 'UpdropRaridade', function()
   end
 end)
 
+macro(1, 'Troca de Armas', function()
+      if storage.holditem > now then
+        moveToSlot(13815, 2)
+      else
+    if not g_game.isAttacking() then return end
+    local distance = getDistanceBetween(pos(), g_game.getAttackingCreature():getPosition());
+    if distance <= 1 then
+        moveToSlot(13788, 2);
+    elseif distance > 1 then
+        moveToSlot(13779, 2);
+    end
+end
+end));
+
 
 onContainerOpen(function(container, previousContainer)
   if not container:getName():find('grey bag') then return end
@@ -280,6 +294,8 @@ UI.DualScrollPanel(storage.manaTrain, function(widget, newParams)
   storage.manaTrain = newParams
   manatrainmacro.setOn(storage.manaTrain.on)
 end)
+
+
 
 UI.Separator()
 
