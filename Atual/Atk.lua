@@ -466,22 +466,23 @@ g_game.attack(spec)
   end
 end)
 
-autoatackcave = macro(200000, 'AutoHunt',function()end)
---onAttackingCreatureChange(function(creature, oldCreature)
---  if autoatackcave.isOff() then return end
---  if creature and creature:isPlayer() then
---    TargetBot.setOff()
---    CaveBot.setOff()
---    g_game.setChaseMode(1)
---    g_game.setSafeFight(false)
---  end
---  if oldCreature and oldCreature:isPlayer() then
---    TargetBot.setOn()
---    CaveBot.setOn()
---    g_game.setChaseMode(0)
---    g_game.setSafeFight(true)
---  end
---end)
+autoatackcave = macro(200000, 'AutoRevide',function()end)
+autoatackcave2 = macro(200000, 'AutoATK',function()end)
+onAttackingCreatureChange(function(creature, oldCreature)
+  if autoatackcave2.isOff() then return end
+  if creature and creature:isPlayer() then
+    TargetBot.setOff()
+    CaveBot.setOff()
+    g_game.setChaseMode(1)
+    g_game.setSafeFight(false)
+  end
+  if oldCreature and oldCreature:isPlayer() then
+    TargetBot.setOn()
+    CaveBot.setOn()
+    g_game.setChaseMode(0)
+    g_game.setSafeFight(true)
+  end
+end)
 
 Revidetext = macro(200000, 'Revide PK',function()end)
 onTextMessage(function(mode, text)
