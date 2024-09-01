@@ -508,7 +508,7 @@ end)
 
 
 onTextMessage(function(mode, text)
-  if text:find('') then
+  if text:find('Warning!') and (text:find(storage.ntarget2) or text:find(storage.ntarget)) then
     atkname.setOff()
       if (FragSemanal < FragSlimit) or (Fragdiario < Fragdlimit) or (FragMensal < FragMlimit) then
         schedule(900000, function()
