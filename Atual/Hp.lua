@@ -21,15 +21,17 @@ healmacro = macro(200, 'heal', function()
 UI.Label('Item ID')
 UI.TextEdit(storage.hpitem or "3077", function(widget, newText)
 storage.hpitem = newText
+storage.nhpitem = tonumber(storage.hpitem)
 end)
 UI.Label('HP')
 UI.TextEdit(storage.hppot or "60", function(widget, newText)
 storage.hppot = newText
+storage.hptouse = tonumber(storage.hppot)
 end)
 
 itemhealmacro = macro(200, 'Item heal', function()
-  if hppercent() < tonumber(storage.hppot) then
-    use(tonumber(storage.hpitem))
+  if hppercent() < storage.hptouse then
+    use(storage.nhpitem)
   end
 end)
 
