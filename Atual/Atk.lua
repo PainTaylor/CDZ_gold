@@ -506,7 +506,7 @@ onTextMessage(function(mode, text)
   end
 end)
 
-autodesligaratkname = macro(2000, 'Desligar atk name ao fragar', function())
+autodesligaratkname = macro(2000, 'Desligar atk name ao fragar', function()end)
 onTextMessage(function(mode, text)
   if autodesligaratkname.isOff() then return end
   if text:find('Warning!') and (text:find(storage.ntarget2) or text:find(storage.ntarget)) then
