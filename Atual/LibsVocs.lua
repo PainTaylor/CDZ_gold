@@ -86,7 +86,19 @@ if player:getTitle() == ('Mu [Aries]') then
   info('Load: ' .. player:getTitle())
 end
 
-if player:getTitle() == ('Camus [Aquario]' or player:getTitle() == 'Camus Renegado [Aquario]') then
+if player:getTitle() == ('Camus [Aquario]') then
+  storage.elemento = 'Wind'
+  storage.combo1 = 'Esquife de Gelo'
+  storage.combo2 = 'circulo de gelo'
+  storage.combo3 = 'Daiyamondo Dasuto'
+  storage.combo4 = 'ultimate ' .. storage.elemento --contelação:  ' .. storage.elemento
+  storage.sspell = nil
+  storage.ultimate = 'Esquife de Gelo Supremo'
+  storage.sense = 'sense'
+  info('Load: ' .. player:getTitle())
+end
+
+if player:getTitle() == ('Camus Renegado [Aquario]') then
   storage.elemento = 'Wind'
   storage.combo1 = 'Esquife de Gelo'
   storage.combo2 = 'circulo de gelo'
