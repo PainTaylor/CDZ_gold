@@ -1235,6 +1235,18 @@ if player:getTitle() == ('Saga [Gemeos Divino]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('El Cid [Capricornio]') then
+  storage.elemento = 'Wind'
+  storage.combo1 = 'Jumping Stone'
+  storage.combo2 = 'Seiken Ex'
+  storage.combo3 = 'Excalibur Light'
+  storage.combo4 = 'ultimate ' .. storage.elemento --contelação:  ' .. storage.elemento --contelação:  Gemeos Divino'
+  storage.sspell = nil
+  storage.ultimate = 'Seiken Excalibur'
+  storage.sense = 'sense'
+  info('Load: ' .. player:getTitle())
+end
+
 end)
 
 
