@@ -1247,6 +1247,18 @@ if player:getTitle() == ('El Cid [Capricornio]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('El Cid [Capricornio]') then
+  storage.elemento = 'Light'
+  storage.combo1 = 'Capsula Do Poder Divina'
+  storage.combo2 = 'Lightning Bolt Divino'
+  storage.combo3 = 'Relampago De Plasma Divino'
+  storage.combo4 = 'ultimate ' .. storage.elemento --contelação:  ' .. storage.elemento --contelação:  Gemeos Divino'
+  storage.sspell = nil
+  storage.ultimate = 'Relampago Divino'
+  storage.sense = 'sense'
+  info('Load: ' .. player:getTitle())
+end
+
 end)
 
 
