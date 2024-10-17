@@ -1247,7 +1247,7 @@ if player:getTitle() == ('El Cid [Capricornio]') then
   info('Load: ' .. player:getTitle())
 end
 
-if player:getTitle() == ('El Cid [Capricornio]') then
+if player:getTitle() == ('Aiolia [Leao Divino]') then
   storage.elemento = 'Light'
   storage.combo1 = 'Capsula Do Poder Divina'
   storage.combo2 = 'Lightning Bolt Divino'
