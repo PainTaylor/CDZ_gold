@@ -1259,6 +1259,54 @@ if player:getTitle() == ('Aiolia [Leao Divino]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('Aiacos [Garuda]') then
+  storage.elemento = 'Dark'
+  storage.combo1 = 'Voo Da Garuda'
+  storage.combo2 = 'Conquistador De Indra'
+  storage.combo3 = 'Resplendor Da Morte Galactica'
+  storage.combo4 = 'ultimate ' .. storage.elemento --contelação:  ' .. storage.elemento --contelação:  Gemeos Divino'
+  storage.sspell = nil
+  storage.ultimate = nil
+  storage.sense = 'sense'
+  info('Load: ' .. player:getTitle())
+end
+
+if player:getTitle() == ('Saga Renegado [Gemeos]') then
+  storage.elemento = 'Dark'
+  storage.combo1 = 'Anaza Dimenshon'
+  storage.combo2 = 'Destruicao Mental'
+  storage.combo3 = 'Galaxian Explosion'
+  storage.combo4 = 'ultimate ' .. storage.elemento --contelação:  ' .. storage.elemento --contelação:  Gemeos Divino'
+  storage.sspell = nil
+  storage.ultimate = nil
+  storage.sense = 'sense'
+  info('Load: ' .. player:getTitle())
+end
+
+if player:getTitle() == ('Myu [Papillon]') then
+  storage.elemento = 'Wind'
+  storage.combo1 = 'Ugly Eruption'
+  storage.combo2 = 'Shirukii Suredo'
+  storage.combo3 = 'Encantamento Mortal'
+  storage.combo4 = 'ultimate ' .. storage.elemento --contelação:  ' .. storage.elemento --contelação:  Gemeos Divino'
+  storage.sspell = nil
+  storage.ultimate = 'Po Dourado'
+  storage.sense = 'sense'
+  info('Load: ' .. player:getTitle())
+end
+
+if player:getTitle() == ('Orfeu [Lira]') then
+  storage.elemento = 'Water'
+  storage.combo1 = 'Acorde Noturno'
+  storage.combo2 = 'Serenata Da Viagem Da Morte'
+  storage.combo3 = 'Acorde Perfeito'
+  storage.combo4 = 'ultimate ' .. storage.elemento --contelação:  ' .. storage.elemento --contelação:  Gemeos Divino'
+  storage.sspell = nil
+  storage.ultimate = 'Po Dourado'
+  storage.sense = 'sense'
+  info('Load: ' .. player:getTitle())
+end
+
 end)
 
 
