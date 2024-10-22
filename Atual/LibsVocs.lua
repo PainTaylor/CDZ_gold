@@ -1302,7 +1302,7 @@ if player:getTitle() == ('Orfeu [Lira]') then
   storage.combo3 = 'Acorde Perfeito'
   storage.combo4 = 'ultimate ' .. storage.elemento --contelação:  ' .. storage.elemento --contelação:  Gemeos Divino'
   storage.sspell = nil
-  storage.ultimate = 'Po Dourado'
+  storage.ultimate = nil
   storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end
