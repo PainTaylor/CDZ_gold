@@ -73,6 +73,7 @@ end)
 --Code
 local toFollowPos = {}
 local followMacro = macro(20, "Follow", function()
+    if g_game.isAttacking() then return end
 local target = getCreatureByName(storage.followLeader)
 if target then
 local tpos = target:getPosition()
