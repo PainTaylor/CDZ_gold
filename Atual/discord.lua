@@ -1,4 +1,25 @@
 setDefaultTab("Dsc")
+
+function removeAcentos(texto)
+    local acentos = {
+        ["á"] = "a", ["à"] = "a", ["â"] = "a", ["ã"] = "a", ["ä"] = "a",
+        ["é"] = "e", ["è"] = "e", ["ê"] = "e", ["ë"] = "e",
+        ["í"] = "i", ["ì"] = "i", ["î"] = "i", ["ï"] = "i",
+        ["ó"] = "o", ["ò"] = "o", ["ô"] = "o", ["õ"] = "o", ["ö"] = "o",
+        ["ú"] = "u", ["ù"] = "u", ["û"] = "u", ["ü"] = "u",
+        ["ç"] = "c",
+        ["Á"] = "A", ["À"] = "A", ["Â"] = "A", ["Ã"] = "A", ["Ä"] = "A",
+        ["É"] = "E", ["È"] = "E", ["Ê"] = "E", ["Ë"] = "E",
+        ["Í"] = "I", ["Ì"] = "I", ["Î"] = "I", ["Ï"] = "I",
+        ["Ó"] = "O", ["Ò"] = "O", ["Ô"] = "O", ["Õ"] = "O", ["Ö"] = "O",
+        ["Ú"] = "U", ["Ù"] = "U", ["Û"] = "U", ["Ü"] = "U",
+        ["Ç"] = "C"
+    }
+    
+    return texto:gsub("[%z\1-\127\194-\244][\128-\191]*", acentos)
+end
+
+-------------------
 local discordTimes = {}
  -- insert your webhook link below
 local webhook = "https://discord.com/api/webhooks/1227437377165725778/Tx5IiNpDtKlAVlo5jl9_3wKoiHNvSknAdMko7kN2NGO144naCKxXMbN149cgVldNepoG"
@@ -54,11 +75,12 @@ end
 
  onTextMessage(function(mode, text)
   if not text:find('Loot of') then return end
-   if text:find('Lendario') or text:find('pico') then   
+   if text:find('Lendario') or text:find('Épico') then
+   sendtext =  removeAcentos(text)
    local data = {
      title = 'Drop',
      name = player:getName(),
-     message = text .. ' Loc: X: '.. posx() .. 'Y: ' .. posy() .. 'Z: ' .. posz(),
+     message = sendtext .. ' Loc: X: '.. posx() .. 'Y: ' .. posy() .. 'Z: ' .. posz(),
      id = "pd",
    }
      sendDiscordWebhook(data)
