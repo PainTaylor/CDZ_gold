@@ -1307,6 +1307,18 @@ if player:getTitle() == ('Orfeu [Lira]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('Tremy [Flecha]') then
+  storage.elemento = 'Wind'
+  storage.combo1 = 'Flechas Fantasmas'
+  storage.combo2 = 'Phantom Arrows'
+  storage.combo3 = 'Fantomu Aro'
+  storage.combo4 = 'ultimate ' .. storage.elemento --contelação:  ' .. storage.elemento --contelação:  Gemeos Divino'
+  storage.sspell = nil
+  storage.ultimate = 'Disparo Mortal'
+  storage.sense = 'sense'
+  info('Load: ' .. player:getTitle())
+end
+
 end)
 
 
