@@ -1230,7 +1230,7 @@ if player:getTitle() == ('Saga [Gemeos Divino]') then
   storage.combo3 = 'galaxian explosion divino'
   storage.combo4 = 'ultimate ' .. storage.elemento --contelação:  ' .. storage.elemento --contelação:  Gemeos Divino'
   storage.sspell = nil
-  storage.ultimate = ''
+  storage.ultimate = 'Big Bang'
   storage.sense = 'sense'
   info('Load: ' .. player:getTitle())
 end

@@ -70,7 +70,7 @@ end
   local data = {   
    title = 'Drop',
      name = player:getName(),
-     message = '[Epico]'.. outtext .. ' Loc: X: '.. posx() .. 'Y: ' .. posy() .. 'Z: ' .. posz(),
+     message = '[Epico] '.. outtext .. ' Loc: X: '.. posx() .. 'Y: ' .. posy() .. 'Z: ' .. posz(),
      id = "pd",
   }
   sendDiscordWebhook(data)
