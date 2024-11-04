@@ -1319,6 +1319,31 @@ if player:getTitle() == ('Tremy [Flecha]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('Hades [Deus]') then
+    storage.elemento = 'Dark'
+  storage.combo1 = 'Yami Raitoningu'
+  storage.combo2 = 'Naraku No Seiken'
+  storage.combo3 = 'Greatest Eclipse'
+  storage.combo4 = 'ultimate ' .. storage.elemento --contelação:  ' .. storage.elemento --contelação:  Gemeos Divino'
+  storage.sspell = nil
+  storage.ultimate = 'Divine Execution'
+  storage.sense = 'sense'
+  info('Load: ' .. player:getTitle())
+end
+
+if player:getTitle() == ('Athena [Deusa]') then
+    storage.elemento = 'Light'
+  storage.combo1 = 'Divine Justice'
+  storage.combo2 = 'Judgment Of Athena'
+  storage.combo3 = 'Sacred Light'
+  storage.combo4 = 'ultimate ' .. storage.elemento --contelação:  ' .. storage.elemento --contelação:  Gemeos Divino'
+  storage.sspell = nil
+  storage.ultimate = 'Deusa Da Guerra'
+  storage.sense = 'sense'
+  info('Load: ' .. player:getTitle())
+end
+
+
 end)
 
 
