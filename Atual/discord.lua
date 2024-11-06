@@ -63,7 +63,7 @@ end
    }
    sendDiscordWebhook(data)
    end
-   if text:find('Épico') then
+   if text:find('pico') then
     info('true')
    epictext = text:find('Épico')
    outtext = text:sub(epictext+6)
