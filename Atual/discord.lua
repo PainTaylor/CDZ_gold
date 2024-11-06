@@ -54,7 +54,7 @@ end
 
  onTextMessage(function(mode, text) 
   if not text:find('Loot of') then return end
-   if text:find('Lendario') then
+   if text:find('Lendario') or text:find('Mitico') then
    local data = {
      title = 'Drop',
      name = player:getName(),
