@@ -164,7 +164,7 @@ onTextMessage(function(mode, text)
         storage.potaamout = 0
     end
 end)
-storage.potaamout = 0
+
 Potx,Poty = 100, 0
 
 
