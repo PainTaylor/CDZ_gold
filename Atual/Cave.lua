@@ -151,3 +151,49 @@ dofile("/cavebot/cavebot.lua")
 
 
 --info('Loaded Cave')
+
+schedule(300, function()
+    use(storage.nhpitem)
+end)
+
+onTextMessage(function(mode, text)
+    if text:find('rainbow') and text:find('Using one of') then
+        storage.potaamout = tonumber(text:match('%d+'))
+    end
+    if text:find('Using the last') then
+        storage.potaamout = 0
+    end
+end)
+storage.potaamout = 0
+Potx,Poty = 100, 0
+
+
+local widget = setupUI([[
+Panel
+  height: 400
+  width: 900
+]], g_ui.getRootWidget())
+
+local ammoutpot = g_ui.loadUIFromString([[
+Label
+  color: white
+  background-color: black
+  opacity: 0.85
+  text-horizontal-auto-resize: true  
+]], widget)
+
+ 
+
+macro(1, function()
+    if storage.potaamout then
+    if storage.potaamout and storage.potaamout >= 50 then
+        ammoutpot:setColor('green')
+    elseif storage.potaamout < 50 then
+        ammoutpot:setColor('red')
+    end
+        ammoutpot:setText('Numero de Pot:  ' .. (storage.potaamout))
+    end
+end)
+ 
+
+ammoutpot:setPosition({y = Poty+50, x =  Potx})
