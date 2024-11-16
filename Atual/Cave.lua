@@ -160,7 +160,7 @@ onTextMessage(function(mode, text)
     if text:find('rainbow') and text:find('Using one of') then
         storage.potaamout = tonumber(text:match('%d+'))
     end
-    if text:find('Using the last') then
+    if text:find('Using the last') and text:find('rainbow') then
         storage.potaamout = 0
     end
 end)
@@ -197,3 +197,10 @@ end)
  
 
 ammoutpot:setPosition({y = Poty+50, x =  Potx})
+
+
+macro(200, 'No Pot Stop', function()
+    if isInPz() and storage.potaamout == 0 then
+        CaveBot.setOff()
+    end
+end)
