@@ -67,10 +67,7 @@ cassiusspot = function()
 end
 
 hyogaspot = function()
-if (posx() >= 1453 and posx() <= 1489) and (posy() >= 1078 and posy() <= 1094 and (posz() == 6)) then
-return true
+    if (posx() >= 1453 and posx() <= 1489) and (posy() >= 1078 and posy() <= 1094 and (posz() == 6)) then
+        return true
+    end
 end
-end
-
-
---info('Loaded Positions')
