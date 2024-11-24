@@ -78,9 +78,9 @@ modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/
     assert(loadstring(script))()
   end);
 
-macro(200, function()
-    player:setTitle('Sasha [Caninha]')
-end)
+--macro(200, function()
+--    player:setTitle('Sasha [Caninha]')
+--end)
 
 --Load Discord
 --modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/discord.lua', function(script)
