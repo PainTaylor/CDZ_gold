@@ -423,6 +423,7 @@ capalart = now
 macro(200,function()
 if capalart >= now then return end
    if freecap() <= 100 then
+    info('Updated')
         local data = {
         message = player:getName() .. ' esta com menos de 100 de cap.',
         id = "pd",
