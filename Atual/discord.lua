@@ -430,9 +430,9 @@ local id = data.id
 end
 
 -----------------------------------------------------
-storage.capalart = now
+capalart = now
 macro(200,function()
-if storage.capalert >= now then return end
+if capalert >= now then return end
    if freecap() <= 100 then
       local data = {
       title = 'Loot Exceded',
@@ -442,6 +442,6 @@ if storage.capalert >= now then return end
       }
       info(alert)
       CapBotWebHook(data)
-      storage.capalart = now + 60000
+      capalart = now + 60000
    end
 end)
