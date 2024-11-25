@@ -432,7 +432,7 @@ end
 -----------------------------------------------------
 capalart = now
 macro(200,function()
-if capalert >= now then return end
+if capalart >= now then return end
    if freecap() <= 100 then
       local data = {
       title = 'Loot Exceded',
@@ -440,7 +440,7 @@ if capalert >= now then return end
       message = 'Está com menos de 100 de cap',
       id = "pd",
       }
-      info(alert)
+      info('alert')
       CapBotWebHook(data)
       capalart = now + 60000
    end
