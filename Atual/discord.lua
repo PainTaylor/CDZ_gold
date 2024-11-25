@@ -437,7 +437,7 @@ if capalart >= now then return end
       local data = {
       title = 'Loot Exceded',
       name = player:getName(),
-      message = 'Está com menos de 100 de cap',
+      message = 'Esta com menos de 100 de cap',
       id = "pd",
       }
      -- info('alert')
