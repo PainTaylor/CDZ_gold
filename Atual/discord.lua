@@ -386,7 +386,7 @@ local discordTimes = {}
 local webhookeveryone = "https://discord.com/api/webhooks/1310431487333629983/tE-ah0L79xqUUqpkKUCAiQOrP4yDMDMK12ZJNSLhltLhjFkDrZcUaxfHUDbh13BB-mrG"
 
 local default_dataeveryone = {
-  username = "Fogueteiro",
+  username = "CapBot",
 }
 
 function onHTTPResult(data, err)
