@@ -383,65 +383,51 @@ end)
 ---------------------------------------------------------
 
 local discordTimes = {}
- -- insert your webhook link below
-local capboturl = "https://discord.com/api/webhooks/1310431487333629983/tE-ah0L79xqUUqpkKUCAiQOrP4yDMDMK12ZJNSLhltLhjFkDrZcUaxfHUDbh13BB-mrG"
+local webhookeveryone = "https://discord.com/api/webhooks/1310431487333629983/tE-ah0L79xqUUqpkKUCAiQOrP4yDMDMK12ZJNSLhltLhjFkDrZcUaxfHUDbh13BB-mrG"
 
-local default_data = {
-  username = "CapBot", -- name discord displays the message from
-}
-
-local embed = {
-  color = 10038562, -- default color - dark red
+local default_dataeveryone = {
+  username = "Fogueteiro",
 }
 
 function onHTTPResult(data, err)
   if err then
-    print("Discord Webhook Error: ".. err)
+    info("Erro no Webhook do Discord: " .. err)
+  else
+    info("Mensagem enviada com sucesso!")
   end
 end
 
- -- This allows you to send messages to discord using a webhook.
- -- The "id" is to save the time it was last used and the "delayed" is the next time it can send (Player alert beeps every 1500ms, you can make it so it only sends the alert once every 10 seconds etc.)
-function CapBotWebHook(data)
-local id = data.id
+function CapHook(data)
+  local id = data.id
   if id then
     local dTime = discordTimes[id]
     if dTime and os.time() < dTime then return end
-    discordTimes[id] = os.time() + (0) -- delayed value or 10 seconds
+    discordTimes[id] = os.time() + (data.delay or 0) 
   end
 
-  local dEmbed = embed
-  if data.color then dEmbed.color = data.color end
-  dEmbed.title = "**".. data.title .."**"
-  dEmbed.fields = {
-    {
-      name = "Name: ",
-      value = data.name,
-    },
-    {
-      name = "Message",
-      value = data.message,
-    }
+  local dataSend = {
+    username = default_dataeveryone.username,
+    content = data.message
   }
 
-  local dataSend = default_data
-  dataSend.embeds = { dEmbed }
-  HTTP.postJSON(CapBotWebHook, dataSend, onHTTPResult)
+  HTTP.postJSON(webhookeveryone, dataSend, onHTTPResult)
 end
 
+
 -----------------------------------------------------
+
+
+
+
 capalart = now
 macro(200,function()
 if capalart >= now then return end
    if freecap() <= 100 then
-      local data = {
-      title = 'Loot Exceded',
-      name = player:getName(),
-      message = 'Esta com menos de 100 de cap',
-      id = "pd",
-      }
-     -- info('alert')
-      CapBotWebHook(data)
+        local data = {
+        message = player:getName() .. ' esta com menos de 100 de cap.',
+        id = "pd",
+        }
+      CapHook(data)
       capalart = now + 60000
    end
 end)
