@@ -65,7 +65,7 @@ end
    end
    epictext = text:find('Épico')
    if epictext then
-    info('true')
+   -- info('true')
    outtext = text:sub(epictext+6)
   local data = {   
    title = 'Drop',
@@ -440,7 +440,7 @@ if capalart >= now then return end
       message = 'Está com menos de 100 de cap',
       id = "pd",
       }
-      info('alert')
+     -- info('alert')
       CapBotWebHook(data)
       capalart = now + 60000
    end
