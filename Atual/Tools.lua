@@ -464,3 +464,156 @@ onKeyDown(function(keys)
 info(targetsense)
     end
 end)
+
+
+local ItemsToMove = {11755,13302,12272,13294,13298,13368,13882,13369,13831,13295,13882,13928,13881,13879,14251,13660,13297,13299,13194,13713,14824,13305,13304,13375,13880,12271,13657,14601,14594,14342,14599,14592,14602}  
+
+local function searchAndMoveItems()
+    for _, container in pairs(getContainers()) do
+      if container:getName() == 'the backpack' then
+        for _, item in pairs(container:getItems()) do
+          if table.find(ItemsToMove, item:getId()) then
+              g_game.move(item, {x = 65535, y = SlotAmmo, z = 0}, item:getCount())
+            return true  
+          end
+        end
+      end
+    end
+  return false
+end
+
+macro(1000, "Move Frags", searchAndMoveItems)
+
+
+local toKeep = {
+  -- id / rarity to KEEP
+  -- Arma>Shield>Helmet>Armor>Legs>Boots>Ring
+  -- Escorpião Set
+  [14727] = {'Raro','Épico','Lendario','Mitico'},
+  [13760] = {'Raro','Épico','Lendario','Mitico'},
+  [13900] = {'Raro','Épico','Lendario','Mitico'},
+  [13901] = {'Raro','Épico','Lendario','Mitico'},
+  [13902] = {'Raro','Épico','Lendario','Mitico'},
+  [13903] = {'Raro','Épico','Lendario','Mitico'},
+  [14857] = {'Raro','Épico','Lendario','Mitico'},
+  -- Libra Set
+  [14014] = {'Raro','Épico','Lendario','Mitico'},
+  [14016] = {'Raro','Épico','Lendario','Mitico'},
+  [14009] = {'Raro','Épico','Lendario','Mitico'},
+  [14010] = {'Raro','Épico','Lendario','Mitico'},
+  [14011] = {'Raro','Épico','Lendario','Mitico'},
+  [14012] = {'Raro','Épico','Lendario','Mitico'},
+  [14015] = {'Raro','Épico','Lendario','Mitico'},
+  -- Capricornio Set
+  [13897] = {'Raro','Épico','Lendario','Mitico'},
+  [13762] = {'Raro','Épico','Lendario','Mitico'},
+  [13893] = {'Raro','Épico','Lendario','Mitico'},
+  [13894] = {'Raro','Épico','Lendario','Mitico'},
+  [13895] = {'Raro','Épico','Lendario','Mitico'},
+  [13896] = {'Raro','Épico','Lendario','Mitico'},
+  [14865] = {'Raro','Épico','Lendario','Mitico'},
+  -- Dark Capricornio Set
+  [14228] = {'Raro','Épico','Lendario','Mitico'},
+  [14896] = {'Raro','Épico','Lendario','Mitico'},
+  [14224] = {'Raro','Épico','Lendario','Mitico'},
+  [14225] = {'Raro','Épico','Lendario','Mitico'},
+  [14226] = {'Raro','Épico','Lendario','Mitico'},
+  [14227] = {'Raro','Épico','Lendario','Mitico'},
+  [14897] = {'Raro','Épico','Lendario','Mitico'},
+  -- Touro Set
+  [11782] = {'Épico','Lendario','Mitico'},
+  [13757] = {'Épico','Lendario','Mitico'},
+  [11778] = {'Épico','Lendario','Mitico'},
+  [11779] = {'Épico','Lendario','Mitico'},
+  [11780] = {'Épico','Lendario','Mitico'},
+  [11781] = {'Épico','Lendario','Mitico'},
+  [14021] = {'Épico','Lendario','Mitico'},
+  -- Cavalo Marinho Set
+  [14248] = {'Raro','Épico','Lendario','Mitico'},
+  [14249] = {'Raro','Épico','Lendario','Mitico'},
+  [14244] = {'Raro','Épico','Lendario','Mitico'},
+  [14245] = {'Raro','Épico','Lendario','Mitico'},
+  [14246] = {'Raro','Épico','Lendario','Mitico'},
+  [14247] = {'Raro','Épico','Lendario','Mitico'},
+  [14882] = {'Raro','Épico','Lendario','Mitico'},
+  -- Sagitario Set
+  [14193] = {'Raro','Épico','Lendario','Mitico'},
+  --[14016] = {'Raro','Épico','Lendario','Mitico'},
+  [14189] = {'Raro','Épico','Lendario','Mitico'},
+  [14190] = {'Raro','Épico','Lendario','Mitico'},
+  [14191] = {'Raro','Épico','Lendario','Mitico'},
+  [14192] = {'Raro','Épico','Lendario','Mitico'},
+  [14859] = {'Raro','Épico','Lendario','Mitico'},
+  -- LeãoAiolia Set
+  [14294] = {'Raro','Épico','Lendario','Mitico'},
+  [14295] = {'Raro','Épico','Lendario','Mitico'},
+  [14290] = {'Raro','Épico','Lendario','Mitico'},
+  [14291] = {'Raro','Épico','Lendario','Mitico'},
+  [14292] = {'Raro','Épico','Lendario','Mitico'},
+  [14293] = {'Raro','Épico','Lendario','Mitico'},
+  [14296] = {'Raro','Épico','Lendario','Mitico'},
+  -- Leao Ikki Set
+  [14336] = {'Raro','Épico','Lendario','Mitico'},
+  [14337] = {'Raro','Épico','Lendario','Mitico'},
+  [14332] = {'Raro','Épico','Lendario','Mitico'},
+  [14333] = {'Raro','Épico','Lendario','Mitico'},
+  [14334] = {'Raro','Épico','Lendario','Mitico'},
+  [14335] = {'Raro','Épico','Lendario','Mitico'},
+  --[] = {'Raro','Épico','Lendario','Mitico'},
+  -- Scylla Set
+  [14315] = {'Raro','Épico','Lendario','Mitico'},
+  --[14016] = {'Raro','Épico','Lendario','Mitico'},
+  [14311] = {'Raro','Épico','Lendario','Mitico'},
+  [14312] = {'Raro','Épico','Lendario','Mitico'},
+  [14313] = {'Raro','Épico','Lendario','Mitico'},
+  [14314] = {'Raro','Épico','Lendario','Mitico'},
+  --[14015] = {'Raro','Épico','Lendario','Mitico'},
+  -- Chrysaor Set
+  [13891] = {'Raro','Épico','Lendario','Mitico'},
+  --[14016] = {'Raro','Épico','Lendario','Mitico'},
+  [13887] = {'Raro','Épico','Lendario','Mitico'},
+  [13888] = {'Raro','Épico','Lendario','Mitico'},
+  [13889] = {'Raro','Épico','Lendario','Mitico'},
+  [13890] = {'Raro','Épico','Lendario','Mitico'},
+  --[14015] = {'Raro','Épico','Lendario','Mitico'},
+  -- kraken Set
+  [13949] = {'Raro','Épico','Lendario','Mitico'},
+  [14016] = {'Raro','Épico','Lendario','Mitico'},
+  [13945] = {'Raro','Épico','Lendario','Mitico'},
+  [13946] = {'Raro','Épico','Lendario','Mitico'},
+  [13947] = {'Raro','Épico','Lendario','Mitico'},
+  [13948] = {'Raro','Épico','Lendario','Mitico'},
+  --[14015] = {'Raro','Épico','Lendario','Mitico'},
+  -- Virgem Set
+  [14358] = {'Incomum','Raro','Épico','Lendario','Mitico'},
+  [14357] = {'Incomum','Raro','Épico','Lendario','Mitico'},
+  [14351] = {'Incomum','Raro','Épico','Lendario','Mitico'},
+  [14352] = {'Incomum','Raro','Épico','Lendario','Mitico'},
+  [14353] = {'Incomum','Raro','Épico','Lendario','Mitico'},
+  [14354] = {'Incomum','Raro','Épico','Lendario','Mitico'},
+  [14356] = {'Incomum','Raro','Épico','Lendario','Mitico'},
+  -- Aquario Set
+  [13842] = {'Épico','Lendario','Mitico'},
+  [8079] = {'Épico','Lendario','Mitico'},
+  [13838] = {'Épico','Lendario','Mitico'},
+  [13839] = {'Épico','Lendario','Mitico'},
+  [13840] = {'Épico','Lendario','Mitico'},
+  [13841] = {'Épico','Lendario','Mitico'},
+  --[14356] = {'Épico','Lendario','Mitico'},
+}
+macro(1000, "Move Rarity", function()
+  for _, c in pairs(getContainers()) do
+    if c:getName() == 'the backpack' then
+    for _, i in ipairs(c:getItems()) do
+      local cfg = toKeep[i:getId()]
+      if cfg then
+        for e, entry in pairs(cfg) do
+          if i:getTooltip():find(entry) then
+            g_game.move(i, {x = 65535, y = SlotAmmo, z = 0}, i:getCount())
+          end
+        end
+      end
+    end
+    end
+  end
+end)
