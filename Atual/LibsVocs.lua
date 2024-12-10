@@ -1343,6 +1343,17 @@ if player:getTitle() == ('Athena [Deusa]') then
   info('Load: ' .. player:getTitle())
 end
 
+if player:getTitle() == ('Seiya [Pegasus Divino]') then
+    storage.elemento = 'Light'
+  storage.combo1 = 'Divino Meteoro De Pegasus'
+  storage.combo2 = 'Divino Cometa De Pegasus'
+  storage.combo3 = 'Divino Turbilhao De Pegasus'
+  storage.combo4 = 'ultimate ' .. storage.elemento --contelação:  ' .. storage.elemento --contelação:  Gemeos Divino'
+  storage.sspell = nil
+  storage.ultimate = 'Aniquilacao Divina De Pegasus'
+  storage.sense = 'sense'
+  info('Load: ' .. player:getTitle())
+end
 
 end)
 
