@@ -48,7 +48,7 @@ distcalc = function(creature, distance)
     end
 end
 
-macro(200, 'ArtefactAdapt', function()
+macro(200, 'Adapt2.0', function()
   if storage.holditem > now then
     moveToSlot(13815, 2)
   end
