@@ -36,17 +36,36 @@ macro(200, 'ArtefactAdapt', function()
   end
 end)
 
-macro(200, 'UpdropRaridade', function()
+
+distcalc = function(creature, distance)
+    local pPos = player:getPosition()
+    local cPos = creature:getPosition()
+    if type(distance) == 'number' then
+        if getDistanceBetween(pPos, cPos) > distance then
+            return false
+        else return true
+        end
+    end
+end
+
+macro(200, 'ArtefactAdapt', function()
   if storage.holditem > now then
     moveToSlot(13815, 2)
-  elseif g_game.isAttacking() then
-      x = g_game.getAttackingCreature()
-     if x:getHealthPercent() <= 10 and x:isMonster() then
-      moveToSlot(13804, 2)
-      delay(1000)
-  else
-    moveToSlot(13779, 2)
   end
+  if storage.holditem > now then return end
+  if g_game.isAttacking() then
+    local x = g_game.getAttackingCreature()
+    if x:isMonster() and distcalc(x, 1) then
+        if x:getHealthPercent() <= 10 then
+          moveToSlot(13804, 2)
+          delay(1000)
+        else
+          moveToSlot(13794, 2)
+        end
+    end
+    if x:isPlayer() and distcalc(x, 1) then
+      moveToSlot(13779, 2)
+    end
   else
     moveToSlot(13788, 2)
   end
