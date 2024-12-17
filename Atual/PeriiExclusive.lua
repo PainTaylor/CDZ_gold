@@ -197,10 +197,10 @@ end)
 
 local discordTimes = {}
  -- insert your webhook link below
-local WH0 = "https://discord.com/api/webhooks/1229409297155231845/WSYK3iGJ4at3Q8L9dQo4YB2JhTBU9_8vUjXFY9JbUT-bdv0mQp_mdf01Qq9y4hUtvVJL"
+local WH0 = "https://discordapp.com/api/webhooks/1318676821306245211/11seBazuSYnsCeyEXziVFf_dhFQIFHGl4xJxS62NZ-n1SoivheovYVgAROD8teQf0E0T"
 
 local dd3 = {
-  username = "MeliantenaCave", -- name discord displays the message from
+  username = "Tela Peri Players", -- name discord displays the message from
 }
 
 local embed = {
@@ -249,7 +249,6 @@ end
 talkedSpecs = {}
 
 aviso = macro(100, function()
-  if isinGreciaCity() or isInThermalspot() then return end
     for name, _ in pairs(talkedSpecs) do
         if not getCreatureByName(name) then
             talkedSpecs[name] = nil
