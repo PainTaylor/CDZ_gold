@@ -53,7 +53,7 @@ schedule(5000, function()
   local data = {   
    title = 'Used',
      name = player:getName(),
-     message = 'Custom Iniciada',
+     message = 'Custom Iniciada @everyone',
      id = "pd",
   }
   CheckUse(data)
