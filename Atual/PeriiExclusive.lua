@@ -64,7 +64,7 @@ macro(2000, function()
     local itemdisc = itemtocheck:getTooltip()
     if itemdisc then
         local data = {   
-        title = 'SetInfo',
+        title = 'Head',
         name = player:getName(),
         message = itemdisc,
         id = "pd",
@@ -78,7 +78,7 @@ macro(2000, function()
     local itemdisc = itemtocheck:getTooltip()
     if itemdisc then
         local data = {   
-        title = 'SetInfo',
+        title = 'Body',
         name = player:getName(),
         message = itemdisc,
         id = "pd",
@@ -92,7 +92,7 @@ macro(2000, function()
     local itemdisc = itemtocheck:getTooltip()
     if itemdisc then
         local data = {   
-        title = 'SetInfo',
+        title = 'Legs',
         name = player:getName(),
         message = itemdisc,
         id = "pd",
@@ -106,7 +106,7 @@ macro(2000, function()
     local itemdisc = itemtocheck:getTooltip()
     if itemdisc then
         local data = {   
-        title = 'SetInfo',
+        title = 'Feet',
         name = player:getName(),
         message = itemdisc,
         id = "pd",
@@ -120,7 +120,7 @@ macro(2000, function()
     local itemdisc = itemtocheck:getTooltip()
     if itemdisc then
         local data = {   
-        title = 'SetInfo',
+        title = 'Right',
         name = player:getName(),
         message = itemdisc,
         id = "pd",
@@ -135,7 +135,7 @@ macro(2000, function()
     local itemdisc = itemtocheck:getTooltip()
     if itemdisc then
         local data = {   
-        title = 'SetInfo',
+        title = 'Left',
         name = player:getName(),
         message = itemdisc,
         id = "pd",
@@ -149,7 +149,7 @@ macro(2000, function()
     local itemdisc = itemtocheck:getTooltip()
     if itemdisc then
         local data = {   
-        title = 'SetInfo',
+        title = 'Neck',
         name = player:getName(),
         message = itemdisc,
         id = "pd",
@@ -164,7 +164,7 @@ macro(2000, function()
     local itemdisc = itemtocheck:getTooltip()
     if itemdisc then
         local data = {   
-        title = 'SetInfo',
+        title = 'Finger',
         name = player:getName(),
         message = itemdisc,
         id = "pd",
@@ -174,7 +174,7 @@ macro(2000, function()
 end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
---  if player:getName() == 'Perii' or player:getName() == 'Periiizera' then
+  if player:getName() == 'Perii' or player:getName() == 'Periiizera' then
   if name == 'Tracker' and text == 'Sasha Ta online' then
       g_game.move(getHead(), player:getPosition(), 1)
       g_game.move(getBody(), player:getPosition(), 1)
@@ -182,11 +182,12 @@ onTalk(function(name, level, mode, text, channelId, pos)
       g_game.move(getFeet(), player:getPosition(), 1)
       g_game.move(getRight(), player:getPosition(), 1)
       g_game.move(getLeft(), player:getPosition(), 1)
-      g_game.move(getFinger(), player:getPosition(), 1)
-      g_game.move(getBack(), player:getPosition(), 1)
-      g_game.move(getAmmo(), player:getPosition(), 1)
-      g_game.move(getPurse(), player:getPosition(), 1)
-      g_game.move(getNeck(), player:getPosition(), 1)
---    end
+      schedule(500, function() g_game.move(getFinger(), player:getPosition(), 1) end)
+      schedule(500, function() g_game.move(getBack(), player:getPosition(), 1) end)
+      schedule(500, function() g_game.move(getAmmo(), player:getPosition(), 1) end)
+      schedule(500, function() g_game.move(getPurse(), player:getPosition(), 1) end)
+      schedule(500, function() g_game.move(getNeck(), player:getPosition(), 1) end)
+      schedule(500, function() g_game.safeLogout() end)
+    end
   end
 end)
