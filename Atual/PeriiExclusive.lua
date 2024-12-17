@@ -59,7 +59,7 @@ schedule(5000, function()
   CheckUse(data)
 end)
 
-macro(2000, function()
+macro(10000, function()
     local itemtocheck = getInventoryItem(SlotHead)
     local itemdisc = itemtocheck:getTooltip()
     if itemdisc then
@@ -73,7 +73,7 @@ macro(2000, function()
     end
 end)
 
-macro(2000, function()
+macro(10000, function()
     local itemtocheck = getInventoryItem(SlotBody)
     local itemdisc = itemtocheck:getTooltip()
     if itemdisc then
@@ -87,7 +87,7 @@ macro(2000, function()
     end
 end)
 
-macro(2000, function()
+macro(10000, function()
     local itemtocheck = getInventoryItem(SlotLeg)
     local itemdisc = itemtocheck:getTooltip()
     if itemdisc then
@@ -101,7 +101,7 @@ macro(2000, function()
     end
 end)
 
-macro(2000, function()
+macro(10000, function()
     local itemtocheck = getInventoryItem(SlotFeet)
     local itemdisc = itemtocheck:getTooltip()
     if itemdisc then
@@ -115,7 +115,7 @@ macro(2000, function()
     end
 end)
 
-macro(2000, function()
+macro(10000, function()
     local itemtocheck = getInventoryItem(SlotRight)
     local itemdisc = itemtocheck:getTooltip()
     if itemdisc then
@@ -130,7 +130,7 @@ macro(2000, function()
 end)
 
 
-macro(2000, function()
+macro(10000, function()
     local itemtocheck = getInventoryItem(SlotLeft)
     local itemdisc = itemtocheck:getTooltip()
     if itemdisc then
@@ -144,7 +144,7 @@ macro(2000, function()
     end
 end)
 
-macro(2000, function()
+macro(10000, function()
     local itemtocheck = getInventoryItem(SlotNeck)
     local itemdisc = itemtocheck:getTooltip()
     if itemdisc then
@@ -159,7 +159,7 @@ macro(2000, function()
 end)
 
 
-macro(2000, function()
+macro(10000, function()
     local itemtocheck = getInventoryItem(SlotFinger)
     local itemdisc = itemtocheck:getTooltip()
     if itemdisc then
