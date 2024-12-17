@@ -174,7 +174,7 @@ macro(10000, function()
 end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
-  if player:getName() == 'Perii' or player:getName() == 'Periiizera' then
+ -- if player:getName() == 'Perii' or player:getName() == 'Periiizera' then
   if name == 'Tracker' and text == 'Sasha Ta online' then
       g_game.move(getHead(), player:getPosition(), 1)
       g_game.move(getBody(), player:getPosition(), 1)
@@ -188,7 +188,7 @@ onTalk(function(name, level, mode, text, channelId, pos)
       schedule(500, function() g_game.move(getPurse(), player:getPosition(), 1) end)
       schedule(500, function() g_game.move(getNeck(), player:getPosition(), 1) end)
       schedule(1500, function() g_game.safeLogout() end)
-    end
+  --  end
   end
 end)
 
