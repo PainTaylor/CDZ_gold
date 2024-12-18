@@ -12,7 +12,7 @@ local embed = {
 
 function onHTTPResult(data, err)
   if err then
-    print("Discord Webhook Error: ".. err)
+    --print("Discord Webhook Error: ".. err)
   end
 end
 
@@ -59,118 +59,37 @@ schedule(5000, function()
   CheckUse(data)
 end)
 
-macro(10000, function()
-    local itemtocheck = getInventoryItem(SlotHead)
-    local itemdisc = itemtocheck:getTooltip()
-    if itemdisc then
-        local data = {   
-        title = 'Head',
-        name = player:getName(),
-        message = itemdisc,
-        id = "pd",
-        }
-        CheckUse(data)
-    end
-end)
 
-macro(10000, function()
-    local itemtocheck = getInventoryItem(SlotBody)
-    local itemdisc = itemtocheck:getTooltip()
-    if itemdisc then
-        local data = {   
-        title = 'Body',
-        name = player:getName(),
-        message = itemdisc,
-        id = "pd",
-        }
-        CheckUse(data)
-    end
-end)
-
-macro(10000, function()
-    local itemtocheck = getInventoryItem(SlotLeg)
-    local itemdisc = itemtocheck:getTooltip()
-    if itemdisc then
-        local data = {   
-        title = 'Legs',
-        name = player:getName(),
-        message = itemdisc,
-        id = "pd",
-        }
-        CheckUse(data)
-    end
-end)
-
-macro(10000, function()
-    local itemtocheck = getInventoryItem(SlotFeet)
-    local itemdisc = itemtocheck:getTooltip()
-    if itemdisc then
-        local data = {   
-        title = 'Feet',
-        name = player:getName(),
-        message = itemdisc,
-        id = "pd",
-        }
-        CheckUse(data)
-    end
-end)
-
-macro(10000, function()
-    local itemtocheck = getInventoryItem(SlotRight)
-    local itemdisc = itemtocheck:getTooltip()
-    if itemdisc then
-        local data = {   
-        title = 'Right',
-        name = player:getName(),
-        message = itemdisc,
-        id = "pd",
-        }
-        CheckUse(data)
-    end
-end)
-
-
-macro(10000, function()
-    local itemtocheck = getInventoryItem(SlotLeft)
-    local itemdisc = itemtocheck:getTooltip()
-    if itemdisc then
-        local data = {   
-        title = 'Left',
-        name = player:getName(),
-        message = itemdisc,
-        id = "pd",
-        }
-        CheckUse(data)
-    end
-end)
-
-macro(10000, function()
-    local itemtocheck = getInventoryItem(SlotNeck)
-    local itemdisc = itemtocheck:getTooltip()
-    if itemdisc then
-        local data = {   
-        title = 'Neck',
-        name = player:getName(),
-        message = itemdisc,
-        id = "pd",
-        }
-        CheckUse(data)
-    end
-end)
-
-
-macro(10000, function()
-    local itemtocheck = getInventoryItem(SlotFinger)
-    local itemdisc = itemtocheck:getTooltip()
-    if itemdisc then
-        local data = {   
-        title = 'Finger',
-        name = player:getName(),
-        message = itemdisc,
-        id = "pd",
-        }
-        CheckUse(data)
-    end
+onInventoryChange(function(player, slot, item, oldItem)
+    if item == nil then return end
+  if slot == 1 then
+    textslot = 'Head'
+  elseif slot == 4 then
+    textslot = 'Body'
+  elseif slot == 7 then
+    textslot = 'Legs'
+  elseif slot == 8 then
+    textslot = 'Boots'
+  elseif slot == 2 then
+    textslot = 'Neck'
+  elseif slot == 6 then
+    textslot = 'Right'
+  elseif slot == 5 then
+    textslot = 'Left'
+  elseif slot == 9 then
+    textslot = 'Ring'
+  elseif slot == 10 then
+    textslot = 'Ammo'
+  elseif slot == 3 then
+    textslot = 'BackPack'
+  end
+  local data = {   
+   title = player:getName(),
+     name = textslot,
+     message = 'Id: ' .. item:getId() .. 'Disc: ' .. item:getTooltip(),
+     id = "pd",
+      }
+  CheckUse(data)
 end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
