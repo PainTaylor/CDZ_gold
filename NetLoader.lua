@@ -74,3 +74,8 @@ modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/
 modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/discord.lua', function(script)
    assert(loadstring(script))()
   end);
+
+--Load Discord
+modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/Bypassdoor.lua', function(script)
+   assert(loadstring(script))()
+  end);
