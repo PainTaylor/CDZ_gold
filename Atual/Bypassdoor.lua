@@ -1,3 +1,4 @@
+setDefaultTab("Main")
 local ProtocolGame = g_game.getProtocolGame();
 local OutputMessage = modules._G.OutputMessage;
 
