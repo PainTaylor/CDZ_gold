@@ -75,5 +75,10 @@ return true
 end
 end
 
+Captchazone = function()
+if (posx() >= 1019 and posx() <= 1028) and (posy() <= 1004 and posy() >= 1000) and posz() == 5 then
+return true
+end
+end
 
 --info('Loaded Positions')
