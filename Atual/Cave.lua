@@ -147,7 +147,7 @@ dofile("/cavebot/walking.lua")
 dofile("/cavebot/depositer.lua")
 dofile("/cavebot/supply.lua")
 -- main cavebot file, must be last
---dofile("/cavebot/cavebot.lua")
+dofile("/cavebot/cavebot.lua")
 
 
 -- load all otui files, order doesn't matter
