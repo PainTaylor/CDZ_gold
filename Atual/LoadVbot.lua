@@ -18,11 +18,11 @@ end
 local luaFiles = {
   --"main",
   --"items",
-  --"vlib",
-  --"new_cavebot_lib",
+  "vlib",
+  "new_cavebot_lib",
   --"configs", -- do not change this and above
   --"extras",
-  --"cavebot",
+  "cavebot",
   --"playerlist",
   --"BotServer",
   --"alarms",
