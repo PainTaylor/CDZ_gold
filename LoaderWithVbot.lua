@@ -58,9 +58,9 @@ modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/
   end);
 --LoadVbot
 
-modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/LoadVbot.lua', function(script)
-    assert(loadstring(script))()
-  end);
+--modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/CDZ_gold/main/Atual/LoadVbot.lua', function(script)
+--    assert(loadstring(script))()
+--  end);
 
 --LoadTarget
 
