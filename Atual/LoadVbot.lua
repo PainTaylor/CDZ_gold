@@ -57,3 +57,4 @@ local luaFiles = {
 for i, file in ipairs(luaFiles) do
   loadScript(file)
 end
+schedule(2000, function()info('upload1')end)
