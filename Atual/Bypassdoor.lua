@@ -5,7 +5,7 @@ local OutputMessage = modules._G.OutputMessage;
 local opcode = 16;
 local SpecialOpcode = modules._G.SpecialOpcode;
 
-macro(100, 'Bypassdoor', function()
+bypassdoormacro = macro(100, 'Bypassdoor', function()
   local window = modules.game_antibotcode.MainWindow;
   if (window:isHidden()) then return; end
 
@@ -17,4 +17,20 @@ macro(100, 'Bypassdoor', function()
   msg:addString(codePanel:getText());
   ProtocolGame:send(msg);
   window:hide();
+end)
+
+
+
+onTextMessage(function(mode, text)
+  if text:find('attack by an ') then return end
+      for pname, _ in pairs(spotedspecs) do
+        if not getCreatureByName(pname) then
+            spotedspecs[pname] = nil
+        end
+    end
+ for _, p in ipairs(getSpectators(posz())) do
+  if p:isPlayer() and text:find(p:getName()) and text:find('attack by') and bypassdoormacro.isOn() then
+    bypassdoormacro.setOff()
+ end
+end
 end)
