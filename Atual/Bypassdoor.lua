@@ -4,7 +4,7 @@ local OutputMessage = modules._G.OutputMessage;
 
 local opcode = 16;
 local SpecialOpcode = modules._G.SpecialOpcode;
-
+setDefaultTab("Cave")
 bypassdoormacro = macro(100, 'Bypassdoor', function()
   local window = modules.game_antibotcode.MainWindow;
   if (window:isHidden()) then return; end
@@ -20,9 +20,9 @@ bypassdoormacro = macro(100, 'Bypassdoor', function()
 end)
 
 
-
+Stopbypass = macro(200, 'StopByPass',function())
 onTextMessage(function(mode, text)
-  if text:find('attack by an ') then return end
+  if text:find('attack by an ') or Stopbypass:isOff() then return end
       for pname, _ in pairs(spotedspecs) do
         if not getCreatureByName(pname) then
             spotedspecs[pname] = nil
