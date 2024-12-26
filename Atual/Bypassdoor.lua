@@ -20,7 +20,7 @@ bypassdoormacro = macro(100, 'Bypassdoor', function()
 end)
 
 
-Stopbypass = macro(200, 'StopByPass',function())
+Stopbypass = macro(200, 'StopByPass',function()end)
 onTextMessage(function(mode, text)
   if text:find('attack by an ') or Stopbypass:isOff() then return end
       for pname, _ in pairs(spotedspecs) do

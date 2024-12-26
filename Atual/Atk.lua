@@ -414,7 +414,7 @@ end)
 
 ------------------------------------------------------------------------------------
 
-local friendList = {'toei', 'ryan', 'darknuss', ''}
+local friendList = {'Low Farmer', 'ryan', 'darknuss', ''}
 
 --- nao editar nada abaixo disso
 
