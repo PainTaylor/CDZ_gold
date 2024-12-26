@@ -410,6 +410,45 @@ macro(1, 'Chiclete Ryan', function()
 end
 end)
 
+
+
+------------------------------------------------------------------------------------
+
+local friendList = {'toei', 'ryan', 'darknuss', ''}
+
+--- nao editar nada abaixo disso
+
+for index, friendName in ipairs(friendList) do
+     friendList[friendName:lower():trim()] = true
+    friendList[index] = nil
+end
+
+
+
+
+
+macro(1, 'ChicleteOnlyOthersSkulls', function()
+  local possibleTarget = false
+  for _, creature in ipairs(getSpectators(posz())) do
+    local specHP = creature:getHealthPercent()
+    if creature:isPlayer() and specHP and specHP > 0 and specHP <= 90 then
+      if not friendList[creature:getName():lower()] and creature:getSkull() ~= 2 then
+        if creature:canShoot() then
+          if not possibleTarget or possibleTargetHP > specHP or (possibleTargetHP == specHP and possibleTarget:getId() < creature:getId()) then
+            possibleTarget = creature
+            possibleTargetHP = possibleTarget:getHealthPercent()
+          end
+        end
+      end
+    end
+  end
+  if possibleTarget and g_game.getAttackingCreature() ~= possibleTarget then
+    g_game.attack(possibleTarget)
+end
+end)
+
+
+
 ----------------------------------------------------------------------------------------
 
 local friendList = {'toei', 'ryan', 'darknuss', ''}
@@ -467,7 +506,7 @@ g_game.attack(spec)
 end)
 
 autoatackcave = macro(200000, 'AutoRevide',function()end)
-autoatackcave2 = macro(200000, 'AutoATK',function()end)
+autoatackcave2 = macro(200000, 'AutoATKCave',function()end)
 onAttackingCreatureChange(function(creature, oldCreature)
   if autoatackcave2.isOff() then return end
   if creature and creature:isPlayer() then
