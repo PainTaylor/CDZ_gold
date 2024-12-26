@@ -427,12 +427,12 @@ end
 
 
 
-macro(1, 'ChicleteOnlyOthersSkulls', function()
+macro(1, 'ChicleteNpParty', function()
   local possibleTarget = false
   for _, creature in ipairs(getSpectators(posz())) do
     local specHP = creature:getHealthPercent()
     if creature:isPlayer() and specHP and specHP > 0 and specHP <= 90 then
-      if not friendList[creature:getName():lower()] and creature:getSkull() ~= 2 then
+      if not friendList[creature:getName():lower()] and (creature:getShield() < 3) then
         if creature:canShoot() then
           if not possibleTarget or possibleTargetHP > specHP or (possibleTargetHP == specHP and possibleTarget:getId() < creature:getId()) then
             possibleTarget = creature
