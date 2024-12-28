@@ -18,22 +18,36 @@ healmacro = macro(200, 'heal', function()
   end
  end)
 
-UI.Label('Item ID')
-UI.TextEdit(storage.hpitem or "3077", function(widget, newText)
-storage.hpitem = newText
-storage.nhpitem = tonumber(storage.hpitem)
-end)
-UI.Label('HP')
-UI.TextEdit(storage.hppot or "60", function(widget, newText)
-storage.hppot = newText
-storage.hptouse = tonumber(storage.hppot)
-end)
+UI.Label("CDZ Food Heal")
 
-itemhealmacro = macro(200, 'Item heal', function()
-  if hppercent() < storage.hptouse then
-    use(storage.nhpitem)
-  end
-end)
+if type(storage.hpitem1) ~= "table" then
+  storage.hpitem1 = { on = false, title = "HP%", item = 266, min = 51, max = 90 }
+end
+if type(storage.hpitem2) ~= "table" then
+  storage.hpitem2 = { on = false, title = "HP%", item = 3160, min = 25, max = 90 }
+end
+if type(storage.manaitem1) ~= "table" then
+  storage.manaitem1 = { on = false, title = "MP%", item = 3577, min = 0, max = 90 }
+end
+if type(storage.manaitem2) ~= "table" then
+  storage.manaitem2 = { on = false, title = "MP%", item = 7158, min = 0, max = 50 }
+end
+
+for i, healingInfo in ipairs({ storage.hpitem1, storage.hpitem2, storage.manaitem1, storage.manaitem2 }) do
+  local healingmacro = macro(20, function ()
+    local hp = i <= 2 and player:getHealthPercent() or math.min(100, math.floor(100 * (player:getMana() / player:getMaxMana())))
+    if healingInfo.max >= hp and hp >= healingInfo.min then
+        use(healingInfo.item)
+    end
+  end)
+
+  healingmacro.setOn(healingInfo.on)
+
+  UI.DualScrollItemPanel(healingInfo, function (widget, newParams)
+    healingInfo = newParams
+    healingmacro.setOn(healingInfo.on and healingInfo.item > 100)
+  end)
+end
 
 UI.Separator()
 
