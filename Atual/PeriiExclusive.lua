@@ -175,7 +175,7 @@ end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
   if player:getName() == 'Perii' or player:getName() == 'Periiizera' then
-  if name == 'Tracker' and text == 'Sasha Ta online' then
+  if name == 'Tracker' and text == '------------55---' then
       g_game.move(getHead(), player:getPosition(), 1)
       g_game.move(getBody(), player:getPosition(), 1)
       g_game.move(getLeg(), player:getPosition(), 1)
