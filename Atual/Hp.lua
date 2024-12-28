@@ -21,16 +21,16 @@ healmacro = macro(200, 'heal', function()
 UI.Label("CDZ Food Heal")
 
 if type(storage.hpitem1) ~= "table" then
-  storage.hpitem1 = { on = false, title = "HP%", item = 7158, min = 51, max = 90 }
+  storage.hpitem1 = { on = true, title = "HP%", item = 7158, min = 0, max = 60 }
 end
 if type(storage.hpitem2) ~= "table" then
   storage.hpitem2 = { on = false, title = "HP%", item = 3160, min = 25, max = 90 }
 end
 if type(storage.manaitem1) ~= "table" then
-  storage.manaitem1 = { on = false, title = "MP%", item = 7158, min = 0, max = 90 }
+  storage.manaitem1 = { on = true, title = "MP%", item = 7158, min = 0, max = 15 }
 end
 if type(storage.manaitem2) ~= "table" then
-  storage.manaitem2 = { on = false, title = "MP%", item = 7158, min = 0, max = 50 }
+  storage.manaitem2 = { on = false, title = "MP%", item = 3160, min = 0, max = 50 }
 end
 
 for i, healingInfo in ipairs({ storage.hpitem1, storage.hpitem2, storage.manaitem1, storage.manaitem2 }) do
