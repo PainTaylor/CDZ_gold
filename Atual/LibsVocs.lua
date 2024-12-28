@@ -1355,6 +1355,19 @@ if player:getTitle() == ('Seiya [Pegasus Divino]') then
   info('Load: ' .. player:getTitle())
 end
 
+
+if player:getTitle() == ('Aiolia [Odin]') then
+  storage.elemento = 'Light'
+  storage.combo1 = 'Raios De Valhalla'
+  storage.combo2 = 'Lamina De Sleipnir'
+  storage.combo3 = 'Tempestade De Asgard'
+  storage.combo4 = 'ultimate ' .. storage.elemento --contelação:  ' .. storage.elemento --contelação:  Gemeos Divino'
+  storage.sspell = nil
+  storage.ultimate = 'Aniquilacao Divina De Pegasus'
+  storage.sense = 'sense'
+  info('Load: ' .. player:getTitle())
+end
+
 end)
 
 
