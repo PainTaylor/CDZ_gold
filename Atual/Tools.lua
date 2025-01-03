@@ -1,41 +1,141 @@
 setDefaultTab("Tools")
 
-storage.holditem = now
-onPlayerHealthChange(function(healthPercent)
-  if healthPercent < 15 then
-    storage.holditem  = now + 3000
-  end
-end)
+canBeShoot = function(creature, distance)
+    local pPos = player:getPosition()
+    local cPos = creature:getPosition()
+    if type(distance) == 'number' then
+        if getDistanceBetween(pPos, cPos) > distance then
+            return false
+        end
+    end
+    return g_map.isSightClear(pPos, cPos)
+end
 
-  speedartefact = findItem(13788)
-  reviveartefact = findItem(13815)
-  Damageartefact = findItem(13779)
-  LootArtefact = findItem(13694)
-  PoisonArtefact = findItem(13727)
-  RarityArtefact = findItem(13804)
+UI.Separator()
 
-macro(200, 'RemovePoison', function()
-    if isPoisioned() then
-    moveToSlot(13727, 2)
-  end
-end)
+local ConfigPainel = "Config"
+local ui = setupUI([[
+ssPanel < Panel
+  margin: 10
+  layout:
+    type: verticalBox
+    
+Panel
+  height: 20
+  Button
+    id: editspell
+    font: verdana-11px-rounded
+    anchors.top: parent.top
+    anchors.left: parent.left
+    color: green
+    anchors.right: parent.right
+    height: 20
+    text: - Artefact Config -
+]])
+ui:setId(ConfigPainel)
 
-macro(200, 'ArtefactAdapt', function()
-  if storage.holditem > now then
-    moveToSlot(13815, 2)
-  elseif g_game.isAttacking() then
-      x = g_game.getAttackingCreature()
-     if x:getHealthPercent() <= 10 and x:isMonster() then
-      moveToSlot(13694, 2)
-      delay(1000)
-  else
-    moveToSlot(13779, 2)
-  end
-  else
-    moveToSlot(13788, 2)
-  end
-end)
+local HealingWindow = setupUI([[
 
+MainWindow
+  !text: tr('Artefact')
+  size: 250 250
+  @onEscape: self:hide()
+
+  TabBar
+    id: tmpTabBar
+    margin-left: 40
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+
+  Panel
+    id: tmpTabContent
+    anchors.top: tmpTabBar.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 3
+    size: 200 140
+    image-source: /data/images/ui/panel_flat
+    image-border: 6
+
+  Button
+    id: closeButton
+    !text: tr('Close')
+    font: cipsoftFont
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 45 21
+    margin-top: 15
+    margin-right: 1  
+]], g_ui.getRootWidget())
+
+local rootWidget = g_ui.getRootWidget()
+if rootWidget then
+    HealingWindow:hide()
+    local tabBar = HealingWindow.tmpTabBar
+    tabBar:setContentWidget(HealingWindow.tmpTabContent)
+
+    for v = 1, 1 do
+        local spellPanel = g_ui.createWidget("ssPanel") -- Creates Panel
+        spellPanel:setId("panelButtons") -- sets ID
+        tabBar:addTab("Hunt", spellPanel)
+        local spellPanel2 = g_ui.createWidget("ssPanel")
+        spellPanel2:setId("panelButtons") -- sets ID
+        tabBar:addTab("PVP", spellPanel2)
+        local spellPanel3 = g_ui.createWidget("ssPanel")
+        spellPanel3:setId("panelButtons") -- sets ID
+        tabBar:addTab("Defense", spellPanel3)
+
+    UI.Label("Mob Dmg", spellPanel)
+    UI.TextEdit(storage.mobdmg or "13794", function(widget, newText)
+    storage.mobdmg = newText
+    storage.Idmobdmg = tonumber(newText)
+    end, spellPanel)
+    UI.Label("Mob Loot", spellPanel)
+    UI.TextEdit(storage.mobloot or "13694", function(widget, newText)
+    storage.mobloot = newText
+    storage.Idmobloot = tonumber(newText)
+    end, spellPanel)
+
+
+    UI.Label("PVP Dmg", spellPanel2)
+    UI.TextEdit(storage.pvpdmg or "13779", function(widget, newText)
+    storage.pvpdmg = newText
+    storage.Idpvpdmg = tonumber(newText)
+    end, spellPanel2)
+
+
+    UI.Label("Revive", spellPanel3)
+    UI.TextEdit(storage.revive or "13815", function(widget, newText)
+    storage.revive = newText
+    storage.Idrevive = tonumber(newText)
+    end, spellPanel3)
+
+    UI.Label("Speed", spellPanel3)
+    UI.TextEdit(storage.speed or "13788", function(widget, newText)
+    storage.speed = newText
+    storage.Idspeed = tonumber(newText)
+    end, spellPanel3)
+
+    UI.Label("PoisonHeal", spellPanel3)
+    UI.TextEdit(storage.healpoison or "13727", function(widget, newText)
+    storage.healpoison = newText
+    storage.Idhealpoison = tonumber(newText)
+    end, spellPanel3)
+
+    end
+
+
+    HealingWindow.closeButton.onClick = function(widget)
+        HealingWindow:hide()
+    end
+
+    ui.editspell.onClick = function(widget)
+        HealingWindow:show()
+        HealingWindow:raise()
+        HealingWindow:focus()
+    end
+end
 
 distcalc = function(creature, distance)
     local pPos = player:getPosition()
@@ -48,26 +148,44 @@ distcalc = function(creature, distance)
     end
 end
 
-macro(200, 'Adapt2.0', function()
+storage.holditem = now
+onPlayerHealthChange(function(healthPercent)
+  if healthPercent < 15 then
+    storage.holditem  = now + 3000
+  end
+end)
+
+macro(200, 'Adapt Master', function()
   if storage.holditem > now then
-    moveToSlot(13815, 2)
+    moveToSlot(storage.Idrevive, 2)
+    --info('Revive Condition')
   end
   if storage.holditem > now then return end
   if g_game.isAttacking() then
     local x = g_game.getAttackingCreature()
-    if x:isMonster() and distcalc(x, 1) then
+    if x:isMonster() then
         if x:getHealthPercent() <= 10 then
-          moveToSlot(13804, 2)
+          moveToSlot(storage.Idmobloot, 2)
           delay(1000)
+          --info('MobLoot Condition')
         else
-          moveToSlot(13794, 2)
+          moveToSlot(storage.Idmobdmg, 2)
+          --info('Mob Dmg Condition')
         end
     end
-    if x:isPlayer() and distcalc(x, 1) then
-      moveToSlot(13779, 2)
+    if x:isPlayer() then
+      if getDistanceBetween(player:getPosition(), x:getPosition()) <= 1 then
+        moveToSlot(storage.Idpvpdmg, 2)
+        --info('PVP Dmg Condition')
+      else
+        moveToSlot(storage.Idspeed, 2)
+        --info('Speed PVP Condition')
+      end
     end
-  else
-    moveToSlot(13788, 2)
+  end
+  if not g_game.isAttacking() then
+    moveToSlot(storage.Idspeed, 2)
+    --info('else condition')
   end
 end)
 
